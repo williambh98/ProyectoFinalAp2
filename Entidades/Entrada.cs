@@ -15,7 +15,7 @@ namespace Entidades
         public DateTime FechaVencimiento { get; set; }
         public int ProvedorID { get; set; }
         public double CantidadTotal { get; set; }
-        public virtual List<ArticuloDetalle> Detalle { get; set; }
+        public virtual List<EntradaDetalle> Detalle { get; set; }
 
         public Entrada()
         {
@@ -24,10 +24,10 @@ namespace Entidades
             CantidadTotal = 0;
             ProvedorID = 0;
             FechaVencimiento = DateTime.Now;
-            this.Detalle = new List<ArticuloDetalle>();
+            this.Detalle = new List<EntradaDetalle>();
         }
 
-        public Entrada(int entradaId, DateTime fecha, int provedorID, double cantidad, List<ArticuloDetalle> detalle)
+        public Entrada(int entradaId, DateTime fecha, int provedorID, double cantidad, List<EntradaDetalle> detalle)
         {
             EntradaId = entradaId;
             Fecha = fecha;

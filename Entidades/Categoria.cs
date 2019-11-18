@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class TipoArticulo
+    public class Categoria
     {
         [Key]
         public int TiposId { get; set; }
@@ -15,7 +15,7 @@ namespace Entidades
         public string Descripcion { get; set; }
         public DateTime FechaCreacion { get; set; }
 
-        public TipoArticulo()
+        public Categoria()
         {
             TiposId = 0;
             Nombre = string.Empty;
@@ -23,7 +23,7 @@ namespace Entidades
             FechaCreacion = DateTime.Now;
         }
 
-        public TipoArticulo(int tiposId, string nombre, string descripcion, DateTime fechaCreacion)
+        public Categoria(int tiposId, string nombre, string descripcion, DateTime fechaCreacion)
         {
             TiposId = tiposId;
             Nombre = nombre;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class ArticuloDetalle
+    public class EntradaDetalle
     {
         [Key]
         public int Id { get; set; }
@@ -20,7 +20,7 @@ namespace Entidades
         public DateTime FechaVencimiento { get; set; }
         [ForeignKey("ArticuloID")]
         public virtual Articulo Articulo { get; set; }
-        public ArticuloDetalle()
+        public EntradaDetalle()
         {
             Id = 0;
             Fecha = DateTime.Now;
@@ -30,7 +30,7 @@ namespace Entidades
             Precio = 0;
             FechaVencimiento = DateTime.Now;
         }
-        public ArticuloDetalle(int id, int entradaId, int articuloID, double cantidad, double precio, DateTime fecha, DateTime fechaVencimiento)
+        public EntradaDetalle(int id, int entradaId, int articuloID, double cantidad, double precio, DateTime fecha, DateTime fechaVencimiento)
         {
             Id = id;
             EntradaId = entradaId;

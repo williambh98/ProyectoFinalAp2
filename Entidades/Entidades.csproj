@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Articulo.cs" />
-    <Compile Include="ArticuloDetalle.cs" />
+    <Compile Include="EntradaDetalle.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="Departamento.cs" />
     <Compile Include="Entrada.cs" />
