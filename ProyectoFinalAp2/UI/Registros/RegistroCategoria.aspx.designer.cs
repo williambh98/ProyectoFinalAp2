@@ -11,7 +11,7 @@ namespace ProyectoFinalAp2.UI.Registros
 {
 
 
-    public partial class RegistroEntrada
+    public partial class RegistroCategoria
     {
 
         /// <summary>
@@ -42,76 +42,40 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox fechaTextBox;
 
         /// <summary>
-        /// ProductoDropdownList control.
+        /// CategoriaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ProductoDropdownList;
+        protected global::System.Web.UI.WebControls.TextBox CategoriaTextBox;
 
         /// <summary>
-        /// CostoTextBox control.
+        /// Categoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CostoTextBox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Categoria;
 
         /// <summary>
-        /// CantidadTextBox control.
+        /// DescripcionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CantidadTextBox;
+        protected global::System.Web.UI.WebControls.TextBox DescripcionTextBox;
 
         /// <summary>
-        /// FechaVencimientoTextBox control.
+        /// DescripcionID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FechaVencimientoTextBox;
-
-        /// <summary>
-        /// AgregardoButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AgregardoButton;
-
-        /// <summary>
-        /// GridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView;
-
-        /// <summary>
-        /// TotalTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TotalTextBox;
-
-        /// <summary>
-        /// ErrorLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLabel;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DescripcionID;
 
         /// <summary>
         /// NuevoButton control.

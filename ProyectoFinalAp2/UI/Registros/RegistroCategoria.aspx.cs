@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace ProyectoFinalAp2.UI.Registros
 {
-    public partial class RegistroDepartamento : System.Web.UI.Page
+    public partial class RegistroCategoria : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,8 +20,8 @@ namespace ProyectoFinalAp2.UI.Registros
                 int id = Utils.ToInt(Request.QueryString["id"]);
                 if (id > 0)
                 {
-                    RepositorioBase<Departamento> repositorio = new RepositorioBase<Departamento>();
-                    Departamento user = repositorio.Buscar(id);
+                    RepositorioBase<Categoria> repositorio = new RepositorioBase<Categoria>();
+                    Categoria user = repositorio.Buscar(id);
                     if (user == null)
                         Utils.ShowToastr(this, "Id no existe", "Error", "error");
                     else
@@ -36,52 +36,55 @@ namespace ProyectoFinalAp2.UI.Registros
                 }
 
             }
-
         }
         private void Limpiar()
         {
             IdTextBox.Text = 0.ToString();
-            NombreTextBox.Text = string.Empty;
+            CategoriaTextBox.Text = string.Empty;
+            DescripcionTextBox.Text = string.Empty;
             fechaTextBox.Text = DateTime.Now.ToString();
+
         }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private Departamento LlenaClase()
+        private Categoria LlenaClase()
         {
-            Departamento departamento = new Departamento();
-            departamento.DepartamentoId = Utils.ToInt(IdTextBox.Text);
-            departamento.Nombre = NombreTextBox.Text;
-            departamento.Fecha = DateTime.Now;
-            return departamento;
+            Categoria categoria = new Categoria();
+            categoria.CategoriaId = Utils.ToInt(IdTextBox.Text);
+            categoria.Nombre = CategoriaTextBox.Text;
+            categoria.Descripcion = DescripcionTextBox.Text;
+            categoria.Fecha = DateTime.Now;
+            return categoria;
         }
-        private void LlenaCampo(Departamento departamento)
+        private void LlenaCampo(Categoria categoria)
         {
-            IdTextBox.Text = departamento.DepartamentoId.ToString();
-            NombreTextBox.Text = departamento.Nombre;
-            fechaTextBox.Text = departamento.Fecha.ToString();
+            IdTextBox.Text = categoria.CategoriaId.ToString();
+            CategoriaTextBox.Text = categoria.Nombre;
+            DescripcionTextBox.Text = categoria.Descripcion;
+            fechaTextBox.Text = categoria.Fecha.ToString();
         }
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Departamento> db = new RepositorioBase<Departamento>();
-            Departamento departamento = db.Buscar(Convert.ToInt32(IdTextBox.Text));
-            return (departamento != null);
+            RepositorioBase<Categoria> db = new RepositorioBase<Categoria>();
+            Categoria categoria = db.Buscar(Convert.ToInt32(IdTextBox.Text));
+            return (categoria != null);
 
         }
 
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Departamento> db = new RepositorioBase<Departamento>();
-            Departamento departamento;
+            RepositorioBase<Categoria> db = new RepositorioBase<Categoria>();
+            Categoria categoria;
             bool paso = false;
 
-            departamento = LlenaClase();
+            categoria = LlenaClase();
 
             if (IdTextBox.Text == Convert.ToString(0))
             {
-                paso = db.Guardar(departamento);
+                paso = db.Guardar(categoria);
             }
             else
             {
@@ -90,7 +93,7 @@ namespace ProyectoFinalAp2.UI.Registros
                     Utils.ShowToastr(this.Page, "LLenar este campo", "Error", "error");
                     return;
                 }
-                paso = db.Modificar(departamento);
+                paso = db.Modificar(categoria);
                 Utils.ShowToastr(this.Page, "Modificado ", "Exito", "success");
                 return;
             }
@@ -104,11 +107,11 @@ namespace ProyectoFinalAp2.UI.Registros
         }
         protected void EliminarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Departamento> repositorio = new RepositorioBase<Departamento>();
+            RepositorioBase<Categoria> repositorio = new RepositorioBase<Categoria>();
             int id = Utils.ToInt(IdTextBox.Text);
-            var departamento = repositorio.Buscar(id);
+            var categoria = repositorio.Buscar(id);
 
-            if (departamento != null)
+            if (categoria != null)
             {
                 if (repositorio.Eliminar(id))
                 {
@@ -125,8 +128,8 @@ namespace ProyectoFinalAp2.UI.Registros
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Departamento> rep = new RepositorioBase<Departamento>();
-            Departamento a = rep.Buscar(Utils.ToInt(IdTextBox.Text));
+            RepositorioBase<Categoria> rep = new RepositorioBase<Categoria>();
+            Categoria a = rep.Buscar(Utils.ToInt(IdTextBox.Text));
             if (a != null)
                 LlenaCampo(a);
             else
@@ -138,3 +141,7 @@ namespace ProyectoFinalAp2.UI.Registros
         }
     }
 }
+
+
+
+    

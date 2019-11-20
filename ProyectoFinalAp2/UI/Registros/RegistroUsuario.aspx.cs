@@ -18,6 +18,7 @@ namespace ProyectoFinalAp2.UI.Registros
         Expression<Func<Usuario, bool>> filtro = x => true;
         protected void Page_Load(object sender, EventArgs e)
         {
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             if (!Page.IsPostBack)
             {
                 //si llego in id
@@ -103,7 +104,7 @@ namespace ProyectoFinalAp2.UI.Registros
                 Utils.ShowToastr(this, "No existe", "Error", "error");
         }
 
-        protected void BuscarLinkButton_Click(object sender, EventArgs e)
+        protected void BuscarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
 

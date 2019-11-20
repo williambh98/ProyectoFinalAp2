@@ -80,7 +80,6 @@ namespace BLL
         {
             bool paso = false;
 
-            Contexto contexto = new Contexto();
             RepositorioBase<Articulo> repositorio = new RepositorioBase<Articulo>();
             Entrada entrada = Buscar(id);
             try
@@ -92,36 +91,33 @@ namespace BLL
                     articulo.Cantidad -= item.Cantidad;
                     repositorio.Modificar(articulo);
                 }
-                contexto.Entrada.Remove(entrada);
-                paso = contexto.SaveChanges() > 0;
-                contexto.Dispose();
+                paso = base.Eliminar(id);
             }
             catch (Exception)
             {
                 throw;
             }
             finally
-            { contexto.Dispose(); }
+            { repositorio.Dispose(); }
             return paso;
         }
 
 
         public override Entrada Buscar(int id)
         {
-            Contexto contexto = new Contexto();
             Entrada entrada = new Entrada();
-
+            Contexto contexto = new Contexto();
             try
             {
-                entrada = contexto.Entrada.Find(id);
-                if (entrada == null)
-                    return entrada;
-                entrada.Detalle.Count();
-                contexto.Dispose();
+                entrada = contexto.Entrada.Include(t => t.Detalle).Where(x => x.EntradaId == id).FirstOrDefault();
             }
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                contexto.Dispose();
             }
             return entrada;
         }

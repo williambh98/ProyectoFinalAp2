@@ -40,7 +40,7 @@
                         <label for="Direccion" class="col-md-3 control-label input-sm">Direccion: </label>
                         <div class="col-md-4">
                             <asp:TextBox CssClass="form-control input-sm" ID="DireccionTextBox" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" MaxLength="200"
+                            <asp:RequiredFieldValidator ID="Direccion" runat="server" MaxLength="200"
                                 ControlToValidate="DireccionTextBox"
                                 ErrorMessage="Campo Direccion obligatorio" ForeColor="Red"
                                 Display="Dynamic" SetFocusOnError="True"
@@ -55,12 +55,11 @@
                         <div class="col-md-8">
                             <asp:TextBox ID="EmailTextBox" runat="server"
                                 Class="form-control input-sm"></asp:TextBox>
-                            <asp:RequiredFieldValidator
-                                runat="server" ID="VEmailTextBox"
-                                ControlToValidate="EmailTextBox" ForeColor="Red"
-                                ErrorMessage="Por favor llenar el campo !"
-                                Display="Dynamic" SetFocusOnError="true"
-                                ToolTip="Campo Email Obligatorio">
+                          <asp:RequiredFieldValidator ID="Email" runat="server" MaxLength="200"
+                                ControlToValidate="EmailTextBox"
+                                ErrorMessage="Campo Email obligatorio" ForeColor="Red"
+                                Display="Dynamic" SetFocusOnError="True"
+                                ToolTip="Campo Email obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Email
                             </asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -70,12 +69,11 @@
                         <div class="col-md-8">
                             <asp:TextBox ID="TelefonoTextBox" runat="server"
                                 Class="form-control input-sm"></asp:TextBox>
-                            <asp:RequiredFieldValidator
-                                runat="server" ID="VLDTelefonoTextBox"
-                                ControlToValidate="TelefonoTextBox" ForeColor="Red"
-                                ErrorMessage="Por favor llenar el campo !"
-                                Display="Dynamic" SetFocusOnError="true"
-                                ToolTip="Campo Telefono Obligatorio">
+                            <asp:RequiredFieldValidator ID="Telefono" runat="server" MaxLength="200"
+                                ControlToValidate="TelefonoTextBox"
+                                ErrorMessage="Campo Telefono obligatorio" ForeColor="Red"
+                                Display="Dynamic" SetFocusOnError="True"
+                                ToolTip="Campo Telefono obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Telefono
                             </asp:RequiredFieldValidator>
                         </div>
                     </div>

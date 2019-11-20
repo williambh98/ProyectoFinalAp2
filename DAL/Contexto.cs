@@ -15,7 +15,6 @@ namespace DAL
         public DbSet<Proveedores> provedores { get; set; }
         public DbSet<Categoria> Tipo { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
-        public DbSet<Inventario> inventarios { get; set; }
         public DbSet<Entrada> Entrada { get; set; }
 
         public Contexto() : base("ConStr")

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoFinalAp2.UI.Registros
+namespace ProyectoFinalAp2
 {
 
 
-    public partial class RegistroTipoArticulo
+    public partial class Login
     {
     }
 }

@@ -8,36 +8,41 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    [Serializable ]
     public class EntradaDetalle
     {
         [Key]
         public int Id { get; set; }
         public int EntradaId { get; set; }
+        [ForeignKey("EntradaId")]
+        public virtual Entrada Entrada { get; set; }
         public int ArticuloID { get; set; }
-        public double Cantidad { get; set; }
-        public double Precio { get; set; }
-        public DateTime Fecha { get; set; }
-        public DateTime FechaVencimiento { get; set; }
         [ForeignKey("ArticuloID")]
         public virtual Articulo Articulo { get; set; }
+        public double Cantidad { get; set; }
+        public double Costo { get; set; }
+        public double Importe { get; set; }
+        public DateTime FechaVencimiento { get; set; }
+
         public EntradaDetalle()
         {
             Id = 0;
-            Fecha = DateTime.Now;
             EntradaId = 0;
             ArticuloID = 0;
             Cantidad = 0;
-            Precio = 0;
+            Costo = 0;
+            Importe = 0;
             FechaVencimiento = DateTime.Now;
         }
-        public EntradaDetalle(int id, int entradaId, int articuloID, double cantidad, double precio, DateTime fecha, DateTime fechaVencimiento)
+
+        public EntradaDetalle(int id, int entradaId, int articuloID, double cantidad, double costo, double importe, DateTime fechaVencimiento)
         {
             Id = id;
             EntradaId = entradaId;
             ArticuloID = articuloID;
             Cantidad = cantidad;
-            Precio = precio;
-            Fecha = fecha;
+            Costo = costo;
+            Importe = importe;
             FechaVencimiento = fechaVencimiento;
         }
     }

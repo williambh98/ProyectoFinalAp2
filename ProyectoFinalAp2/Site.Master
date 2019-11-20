@@ -4,11 +4,12 @@
 
 <html>
 <head runat="server">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="/content/toastr.css" rel="stylesheet" />
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link href="Content/toastr.css" rel="stylesheet" />
+    <script type="text/javascript" src="/Scripts/toastr.min.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,8 +17,8 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>       
-     <%--Menu Inventario--%>
+<body>
+    <%--Menu Inventario--%>
     <div class="container-">
         <nav class="navbar navbar-inverse">
             <div class="navbar-header">
@@ -29,13 +30,23 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <%--  <li><a href="#" style="font-family: Arial; font-size: 16px">Inicio</a></li>--%>
+                    <li><a href="#" style="font-family: Arial; font-size: 16px">Inicio</a></li>
                     <li class="dropdown">
 
                         <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px">Registros<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-                            <li><a href="/UI/Registros/RegistrosUsuario.aspx">Usuario</a></li>                
+                            <li><a href="/UI/Registros/RegistroUsuario.aspx">Usuario</a></li>
+                             <li><a href="/UI/Registros/RegistroArticulo.aspx">Articulo</a></li>
+                            <li><a href="/UI/Registros/RegistroCategoria.aspx">Categoria</a></li>
+                            <li><a href="/UI/Registros/RegistroDepartamento.aspx">Departamento</a></li>
+                            <li><a href="/UI/Registros/RegistroProveedores.aspx">Proveedores</a></li>
 
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px">Capturar Inventario<span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
+                            <li><a href="/UI/Registros/RegistroEntrada.aspx">Capturar</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -46,7 +57,8 @@
                             <li><a href="/UI/Consultas/Cpago.aspx">Pago</a></li>
                         </ul>
                     </li>
-                    <%--<li><a href="#" style="font-family: Arial; font-size: 16px">Ayuda</a></li>--%>
+                    
+                    <li><a href="#" style="font-family: Arial; font-size: 16px">Login</a></li>
                 </ul>
             </div>
             <div class="clearfix visible-lg-block"></div>
@@ -60,13 +72,12 @@
         </div>
     </form>
     <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - System Inventario </p>
-            </footer>
-        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <hr />
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - System Inventario </p>
+        </footer>
+    </div>
 </body>
 </html>

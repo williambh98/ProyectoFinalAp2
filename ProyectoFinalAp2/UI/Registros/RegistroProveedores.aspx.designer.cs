@@ -69,13 +69,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox DireccionTextBox;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// Direccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Direccion;
 
         /// <summary>
         /// EmailTextBox control.
@@ -87,13 +87,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
 
         /// <summary>
-        /// VEmailTextBox control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator VEmailTextBox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Email;
 
         /// <summary>
         /// TelefonoTextBox control.
@@ -105,13 +105,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox TelefonoTextBox;
 
         /// <summary>
-        /// VLDTelefonoTextBox control.
+        /// Telefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator VLDTelefonoTextBox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Telefono;
 
         /// <summary>
         /// NuevoButton control.

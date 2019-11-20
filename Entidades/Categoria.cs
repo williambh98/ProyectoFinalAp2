@@ -11,25 +11,25 @@ namespace Entidades
     public class Categoria
     {
         [Key]
-        public int TiposId { get; set; }
+        public int CategoriaId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public DateTime FechaCreacion { get; set; }
+        public DateTime Fecha { get; set; }
 
         public Categoria()
         {
-            TiposId = 0;
+            CategoriaId = 0;
             Nombre = string.Empty;
             Descripcion = string.Empty;
-            FechaCreacion = DateTime.Now;
+            Fecha = DateTime.Now;
         }
 
         public Categoria(int tiposId, string nombre, string descripcion, DateTime fechaCreacion)
         {
-            TiposId = tiposId;
+            CategoriaId = tiposId;
             Nombre = nombre;
             Descripcion = descripcion;
-            FechaCreacion = fechaCreacion;
+            Fecha = fechaCreacion;
         }
     }
 }

@@ -24,13 +24,22 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
 
         /// <summary>
-        /// BusquedaButton control.
+        /// BuscarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BusquedaButton;
+        protected global::System.Web.UI.WebControls.Button BuscarButton;
+
+        /// <summary>
+        /// fechaTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fechaTextBox;
 
         /// <summary>
         /// NombreTextBox control.
@@ -42,13 +51,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
 
         /// <summary>
-        /// VLDNombreTextBox control.
+        /// Nombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator VLDNombreTextBox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Nombre;
 
         /// <summary>
         /// TelefonoTextBox control.
@@ -60,13 +69,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox TelefonoTextBox;
 
         /// <summary>
-        /// VLDTelefonoTextBox control.
+        /// Telefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator VLDTelefonoTextBox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Telefono;
 
         /// <summary>
         /// EmailTextBox control.
@@ -78,13 +87,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
 
         /// <summary>
-        /// VEmailTextBox control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator VEmailTextBox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Email;
 
         /// <summary>
         /// Tipousuario control.
@@ -105,31 +114,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox ContrasenaTextBox;
 
         /// <summary>
-        /// RFVContrasenia control.
+        /// Contrasena control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVContrasenia;
-
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
-        /// <summary>
-        /// SumaryValidation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary SumaryValidation;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Contrasena;
 
         /// <summary>
         /// ErrorLabel control.
@@ -150,21 +141,21 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.Button NuevoButton;
 
         /// <summary>
-        /// GuadarButton control.
+        /// GuardarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuadarButton;
+        protected global::System.Web.UI.WebControls.Button GuardarButton;
 
         /// <summary>
-        /// EliminarButton control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EliminarButton;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

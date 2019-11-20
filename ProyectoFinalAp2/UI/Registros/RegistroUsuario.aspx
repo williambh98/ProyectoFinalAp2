@@ -1,124 +1,116 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistroUsuario.aspx.cs" Inherits="ProyectoFinalAp2.UI.Registros.RegistrosUsuario" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="panel panel-primary">
-        <div class="panel-heading">Registro Usuario </div>
-        <div class="panel-body">
-            <div class="form-horizontal col-md-12" role="form">
-                <%--UsuarioId--%>
-                <div class="form-group">
-                    <label for="IdTextBox" class="col-md-3 control-label input-sm">Id: </label>
-                    <div class="col-md-1 col-sm-2 col-xs-4">
-                        <asp:TextBox ID="IdTextBox" runat="server" ReadOnly="True" placeholder="0" class="form-control input-sm"></asp:TextBox>
-                    </div>
-                    <div class="col-md-1 col-sm-2 col-xs-4">
-                        <asp:LinkButton ID="BusquedaButton" CssClass="btn btn-info btn-block btn-md" data-toggle="modal" data-target="#myModal" CausesValidation="False" runat="server" Text="<span class='glyphicon glyphicon-search'></span>" PostBackUrl="/UI/Consultas/Cusuario.aspx" />
-                    </div>
-                </div>
-                <%--Nombre--%>
-                <div class="form-group">
-                    <label for="NombreTextBox" class="col-md-3 control-label input-sm">Nombres:</label>
-                    <div class="col-md-8">
-                        <asp:TextBox ID="NombreTextBox" runat="server"
-                            Class="form-control input-sm"></asp:TextBox>
-                        <asp:RequiredFieldValidator
-                            runat="server" ID="VLDNombreTextBox"
-                            ControlToValidate="NombreTextBox" ForeColor="Red"
-                            ErrorMessage="Por favor llenar el campo !"
-                            Display="Dynamic" SetFocusOnError="true">
-                        </asp:RequiredFieldValidator>
-                    </div>
-                </div>
-                <%--  Telefono--%>
-                <div class="form-group">
-                    <label for="TelefonoTextBox" class="col-md-3 control-label input-sm">Telefono:</label>
-                    <div class="col-md-8">
-                        <asp:TextBox ID="TelefonoTextBox" runat="server"
-                            Class="form-control input-sm"></asp:TextBox>
-                          <asp:RequiredFieldValidator
-                            runat="server" ID="VLDTelefonoTextBox"
-                            ControlToValidate="TelefonoTextBox" ForeColor="Red"
-                            ErrorMessage="Por favor llenar el campo !"
-                            Display="Dynamic" SetFocusOnError="true"
-                            ToolTip="Campo Telefono Obligatorio">
-                        </asp:RequiredFieldValidator>
-                    </div>
-                </div>
-                <%--  Email--%>
-                <div class="form-group">
-                    <label for="EmailTextBox" class="col-md-3 control-label input-sm">Email:</label>
-                    <div class="col-md-8">
-                        <asp:TextBox ID="EmailTextBox" runat="server"
-                            Class="form-control input-sm"></asp:TextBox>
-                           <asp:RequiredFieldValidator
-                            runat="server" ID="VEmailTextBox"
-                            ControlToValidate="EmailTextBox" ForeColor="Red"
-                            ErrorMessage="Por favor llenar el campo !"
-                            Display="Dynamic" SetFocusOnError="true"
-                            ToolTip="Campo Email Obligatorio">
-                        </asp:RequiredFieldValidator>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="TipoDropDownList" class="col-md-3 control-label input-sm">Nivel:</label>
-                    <div class="col-md-8">
-                        <asp:DropDownList runat="server" ID="Tipousuario" Class="form-control input-sm">
-                            <asp:ListItem Text="Administrador" Value="0"></asp:ListItem>
-                            <asp:ListItem Text="Usuario" Value="1"></asp:ListItem>
-                        </asp:DropDownList>
-                    </div>
-                </div>
-                <%-- Contrasena--%>
-                <div class="form-group">
-                    <label for="ContrasenaTextBox" class="col-md-3 control-label input-sm">Contrasena:</label>
-                    <div class="col-md-8">
-                        <asp:TextBox ID="ContrasenaTextBox" runat="server"
-                            Class="form-control input-sm"></asp:TextBox>
-                         <asp:RequiredFieldValidator
-                            runat="server" ID="RFVContrasenia"
-                            ControlToValidate="ContrasenaTextBox" ForeColor="Red"
-                            ErrorMessage="Por favor llenar el campo Contraseña!"
-                            Display="Dynamic" SetFocusOnError="true"
-                            ToolTip="Campo Contraseña Obligatorio">
-
-                        </asp:RequiredFieldValidator>
-                    </div>
-                </div>
-                <%-- Fecha--%>
-                <div class="form-group">
-                    <label for="FechaTextBox" class="col-md-3 control-label input-sm">Fecha Creacion:</label>
-                    <div class="col-md-8">
-                        <asp:TextBox class="form-control" ID="TextBox1" type="date" runat="server"></asp:TextBox>
-                    </div>
-                </div>
+    <div style="max-width: 1000px;">
+        <div class="panel panel-default">
+            <div class="panel-heading h4 text-primary text-center">
+                Registro de Usuarios
             </div>
+            <%--UsuarioId--%>
+            <div class="panel-body">
+                <div class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="IdTextBox" class="col-md-3 control-label input-sm">ID: </label>
+                        <div class="col-md-4">
+                            <asp:TextBox CssClass="form-control input-sm" TextMode="Number" ID="IdTextBox" Text="0" runat="server"></asp:TextBox>
+                        </div>
+                        <asp:Button CssClass="col-md-1 btn btn-info btn-sm" ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
+                        <label for="fechaTextBox" class="col-md-2 control-label input-sm">Fecha: </label>
+                        <div class="col-md-2">
+                            <asp:TextBox CssClass="form-control" ID="fechaTextBox" TextMode="Date" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
 
-            <div class="col-md-12">
-                <asp:ValidationSummary runat="server" ID="SumaryValidation"
-                    ForeColor="red"
-                    DisplayMode="BulletList"
-                    ShowSummary="true"
-                    EnableClientScript="True"
-                    Font-Bold="False"
-                    CssClass=" alert alert-danger" />
-            </div>
-        </div>
+                    <%--Nombre--%>
+                    <div class="form-group">
+                        <label for="Nombre" class="col-md-3 control-label input-sm">Nombre: </label>
+                        <div class="col-md-6">
+                            <asp:TextBox CssClass="form-control input-sm" ID="NombreTextBox" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Nombre" runat="server" MaxLength="200"
+                                ControlToValidate="NombreTextBox"
+                                ErrorMessage="Campo Nombre obligatorio" ForeColor="Red"
+                                Display="Dynamic" SetFocusOnError="True"
+                                ToolTip="Campo Descripcion obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Nombre
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <%--  Telefono--%>
+                    <div class="form-group">
+                        <label for="TelefonoTextBox" class="col-md-3 control-label input-sm">Telefono:</label>
+                        <div class="col-md-6">
+                            <asp:TextBox ID="TelefonoTextBox" runat="server"
+                                Class="form-control input-sm"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Telefono" runat="server" MaxLength="200"
+                                ControlToValidate="TelefonoTextBox"
+                                ErrorMessage="Campo Telefono obligatorio" ForeColor="Red"
+                                Display="Dynamic" SetFocusOnError="True"
+                                ToolTip="Campo Telefono obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Telefono
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <%--  Email--%>
+                    <div class="form-group">
+                        <label for="EmailTextBox" class="col-md-3 control-label input-sm">Email:</label>
+                        <div class="col-md-6">
+                            <asp:TextBox ID="EmailTextBox" runat="server"
+                                Class="form-control input-sm"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Email" runat="server" MaxLength="200"
+                                ControlToValidate="EmailTextBox"
+                                ErrorMessage="Campo Email obligatorio" ForeColor="Red"
+                                Display="Dynamic" SetFocusOnError="True"
+                                ToolTip="Campo Email obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Email
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="TipoDropDownList" class="col-md-3 control-label input-sm">Nivel:</label>
+                        <div class="col-md-6">
+                            <asp:DropDownList runat="server" ID="Tipousuario" Class="form-control input-sm">
+                                <asp:ListItem Text="Administrador" Value="0"></asp:ListItem>
+                                <asp:ListItem Text="Usuario" Value="1"></asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+                    <%-- Contrasena--%>
+                    <div class="form-group">
+                        <label for="ContrasenaTextBox" class="col-md-3 control-label input-sm">Contrasena:</label>
+                        <div class="col-md-6">
+                            <asp:TextBox ID="ContrasenaTextBox" runat="server"
+                                Class="form-control input-sm"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Contrasena" runat="server" MaxLength="200"
+                                ControlToValidate="ContrasenaTextBox"
+                                ErrorMessage="Campo Contrasena obligatorio" ForeColor="Red"
+                                Display="Dynamic" SetFocusOnError="True"
+                                ToolTip="Campo Contrasena obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Contrasena
+
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+ 
+                </div>
+
+
         <asp:Label ID="ErrorLabel" runat="server" Text=""></asp:Label>
-        <div class="panel-footer">
-            <div class="text-center">
-                <div class="form-group" style="display: inline-block">
 
-                    <asp:Button Text="Nuevo" class="btn btn-warning btn-sm" runat="server" ID="NuevoButton" OnClick="NuevoButton_Click" />
-                    <asp:Button Text="Guardar" class="btn btn-success btn-sm" runat="server" ID="GuadarButton" OnClick="GuadarButton_Click" />
-                    <asp:Button Text="Eliminar" class="btn btn-danger btn-sm" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />
-
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-10">
+                <div class=" btn btn-primary glyphicon glyphicon-plus ">
+                    <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" BackColor="Transparent" BorderWidth="0" OnClick="NuevoButton_Click"></asp:Button>
+                </div>
+                <div class="btn btn-success glyphicon glyphicon-floppy-disk">
+                    <asp:Button ID="GuardarButton" runat="server" Text="Guardar" BackColor="Transparent" BorderWidth="0" OnClick="GuadarButton_Click"></asp:Button>
+                </div>
+                <div class="btn btn-danger glyphicon glyphicon-floppy-remove">
+                    <asp:Button CssClass=" " ID="Button2" runat="server" Text="Eliminar" BackColor="Transparent" BorderWidth="0" OnClick="EliminarButton_Click"></asp:Button>
                 </div>
             </div>
-
         </div>
     </div>
+    </div>
+        </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 </asp:Content>

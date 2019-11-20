@@ -22,7 +22,7 @@
 
                     <%--Nombre--%>
                     <div class="form-group">
-                        <label for="Nombre" class="col-md-3 control-label input-sm">Descripcion: </label>
+                        <label for="Nombre" class="col-md-3 control-label input-sm">Nombre: </label>
                         <div class="col-md-4">
                             <asp:TextBox CssClass="form-control input-sm" ID="NombreTextBox" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Nombre" runat="server" MaxLength="200"
