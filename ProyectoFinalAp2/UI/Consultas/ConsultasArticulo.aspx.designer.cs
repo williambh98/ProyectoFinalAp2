@@ -7,21 +7,39 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoFinalAp2.UI.Registros
+namespace ProyectoFinalAp2.UI.Consultas
 {
 
 
-    public partial class RegistroCategoria
+    public partial class ConsultasArticulo
     {
 
         /// <summary>
-        /// IdTextBox control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdTextBox;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
+        /// BuscarPorDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList BuscarPorDropDownList;
+
+        /// <summary>
+        /// FiltroTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FiltroTextBox;
 
         /// <summary>
         /// BuscarButton control.
@@ -33,75 +51,48 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.Button BuscarButton;
 
         /// <summary>
-        /// fechaTextBox control.
+        /// fechaCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaTextBox;
+        protected global::System.Web.UI.WebControls.CheckBox fechaCheckBox;
 
         /// <summary>
-        /// CategoriaTextBox control.
+        /// DesdeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CategoriaTextBox;
+        protected global::System.Web.UI.WebControls.TextBox DesdeTextBox;
 
         /// <summary>
-        /// Categoria control.
+        /// HastaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Categoria;
+        protected global::System.Web.UI.WebControls.TextBox HastaTextBox;
 
         /// <summary>
-        /// DescripcionTextBox control.
+        /// DatosGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DescripcionTextBox;
+        protected global::System.Web.UI.WebControls.GridView DatosGridView;
 
         /// <summary>
-        /// DescripcionID control.
+        /// MyEstudiantesReportViewer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator DescripcionID;
-
-        /// <summary>
-        /// NuevoButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button NuevoButton;
-
-        /// <summary>
-        /// GuardarButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarButton;
-
-        /// <summary>
-        /// EliminarButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EliminarButton;
+        protected global::Microsoft.Reporting.WebForms.ReportViewer MyEstudiantesReportViewer;
     }
 }

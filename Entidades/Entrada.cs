@@ -14,20 +14,23 @@ namespace Entidades
         [Key]
         public int EntradaId { get; set; }
         public int UsuarioID { get; set; }
+        public decimal Total { get; set; }
         public DateTime Fecha { get; set; }
         public virtual List<EntradaDetalle> Detalle { get; set; }
 
         public Entrada()
         {
             EntradaId = 0;
+            Total = 0;
             Fecha = DateTime.Now;
             this.Detalle = new List<EntradaDetalle>();
         }
 
-        public Entrada(int entradaId,int usuarioID, DateTime fecha,List<EntradaDetalle> detalle)
+        public Entrada(int entradaId,int usuarioID, decimal total, DateTime fecha,List<EntradaDetalle> detalle)
         {
             EntradaId = entradaId;
             UsuarioID = usuarioID;
+            Total = total;
             Fecha = fecha;
             Detalle = detalle;
         }

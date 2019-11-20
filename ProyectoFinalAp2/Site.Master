@@ -30,35 +30,45 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#" style="font-family: Arial; font-size: 16px">Inicio</a></li>
                     <li class="dropdown">
+                        <a href="/Default.aspx" style="font-family: Arial; font-size: 16px" ><span class="glyphicon glyphicon-home"></span> Inicio</a>
+                    </li>
 
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px">Registros<span class="caret"></span></a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-plus-sign "></span> Registros<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-                            <li><a href="/UI/Registros/RegistroUsuario.aspx">Usuario</a></li>
-                             <li><a href="/UI/Registros/RegistroArticulo.aspx">Articulo</a></li>
+                            <li><a href="/UI/Registros/RegistroUsuario.aspx"><span class="glyphicon glyphicon-plus-sign"></span> Usuario</a></li>
+                            <li><a href="/UI/Registros/RegistroArticulo.aspx">Articulo</a></li>
                             <li><a href="/UI/Registros/RegistroCategoria.aspx">Categoria</a></li>
                             <li><a href="/UI/Registros/RegistroDepartamento.aspx">Departamento</a></li>
                             <li><a href="/UI/Registros/RegistroProveedores.aspx">Proveedores</a></li>
 
                         </ul>
                     </li>
+
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px">Capturar Inventario<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span> Capturar Inventario<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
                             <li><a href="/UI/Registros/RegistroEntrada.aspx">Capturar</a></li>
                         </ul>
                     </li>
+
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px">Consultas<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span> Consultas<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-                            <li><a href="/UI/Consultas/Canalisis.aspx">Analisis</a></li>
-                            <li><a href="/UI/Consultas/CTipoAnalisis.aspx">TipoAnalisis</a></li>
-                            <li><a href="/UI/Consultas/Cpago.aspx">Pago</a></li>
+                            <li><a href="/UI/Consultas/ConsultasArticulo.aspx"> Articulo</a></li>
+                            <li><a href="/UI/Consultas/ConsultasCategoria.aspx"> Categoria</a></li>
+                            <li><a href="/UI/Consultas/ConsultasDepartamento.aspx"> Departamento</a></li>
+                            <li><a href="/UI/Consultas/ConsultasProveedores.aspx"> Proveedores</a></li>
+                            <li><a href="/UI/Consultas/ConsultasUsuario.aspx"> Usuario</a></li>
+                            <li><a href="/UI/Consultas/ConsultasEntrada.aspx"> Inventario</a></li>
                         </ul>
                     </li>
-                    
-                    <li><a href="#" style="font-family: Arial; font-size: 16px">Login</a></li>
+
+                    <li class="dropdown">
+                        <a href="/Login.aspx" style="font-family: Arial; font-size: 16px"><span class=" glyphicon glyphicon-user"></span> Login</a>
+                    </li>
+
                 </ul>
             </div>
             <div class="clearfix visible-lg-block"></div>

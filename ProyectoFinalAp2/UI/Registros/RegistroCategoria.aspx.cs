@@ -74,7 +74,7 @@ namespace ProyectoFinalAp2.UI.Registros
 
         }
 
-        protected void GuardarButton_Click(object sender, EventArgs e)
+        protected void GuadarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Categoria> db = new RepositorioBase<Categoria>();
             Categoria categoria;
@@ -122,7 +122,7 @@ namespace ProyectoFinalAp2.UI.Registros
                     Utils.ShowToastr(this.Page, "No Eliminado", "error");
             }
             else
-                EliminarRequiredFieldValidator.IsValid = false;
+                Utils.ShowToastr(this, "No existe", "Error", "error");
             repositorio.Dispose();
         }
 

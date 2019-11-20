@@ -128,7 +128,7 @@ namespace ProyectoFinalAp2.UI.Registros
                     Utils.ShowToastr(this.Page, "No Eliminado", "error");
             }
             else
-                EliminarRequiredFieldValidator.IsValid = false;
+                Utils.ShowToastr(this.Page, "No Existe", "error");
             repositorio.Dispose();
         }
 

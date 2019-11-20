@@ -69,13 +69,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox TelefonoTextBox;
 
         /// <summary>
-        /// Telefono control.
+        /// TelefonoID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Telefono;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TelefonoID;
 
         /// <summary>
         /// EmailTextBox control.
@@ -93,7 +93,6 @@ namespace ProyectoFinalAp2.UI.Registros
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Email;
 
         /// <summary>
         /// Tipousuario control.
@@ -150,12 +149,12 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.Button GuardarButton;
 
         /// <summary>
-        /// Button2 control.
+        /// EliminarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button EliminarButton;
     }
 }

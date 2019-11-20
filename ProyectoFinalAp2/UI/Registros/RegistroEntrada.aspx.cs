@@ -37,7 +37,7 @@ namespace ProyectoFinalAp2.UI.Registros
 
         private void LlenarCombo()
         {
-            
+
             ProductoDropdownList.Items.Clear();
             RepositorioBase<Articulo> repositorio = new RepositorioBase<Articulo>();
             ProductoDropdownList.DataSource = repositorio.GetList(x => true);
@@ -66,6 +66,7 @@ namespace ProyectoFinalAp2.UI.Registros
             Entrada Entrada = new Entrada();
             Entrada = (Entrada)ViewState["Entrada"];
             Entrada.EntradaId = Convert.ToInt32(IdTextBox.Text);
+            Entrada.Total = Utils.ToDecimal(TotalTextBox.Text);
             Entrada.Fecha = DateTime.Now;
             return Entrada;
         }
@@ -75,7 +76,7 @@ namespace ProyectoFinalAp2.UI.Registros
             Limpiar();
             IdTextBox.Text = entrada.EntradaId.ToString();
             fechaTextBox.Text = entrada.Fecha.ToString();
-            TotalTextBox.Text =" 0";
+            TotalTextBox.Text = entrada.Total.ToString();
             ViewState["Entrada"] = entrada;
             this.BindGrid();
         }
@@ -120,7 +121,7 @@ namespace ProyectoFinalAp2.UI.Registros
             GridView.DataSource = ((Entrada)ViewState["Entrada"]).Detalle;
             GridView.DataBind();
         }
-        protected void GuardarButton_Click(object sender, EventArgs e)
+        protected void GuadarButton_Click(object sender, EventArgs e)
         {
             RepositorioEntrada repositorio = new RepositorioEntrada();
             Entrada factura = repositorio.Buscar(Utils.ToInt(IdTextBox.Text));
@@ -172,7 +173,7 @@ namespace ProyectoFinalAp2.UI.Registros
             entrada.AgregarDetalle
                 (0, Utils.ToInt(IdTextBox.Text),
                 Utils.ToInt(ProductoDropdownList.SelectedValue), Convert.ToDouble(CostoTextBox.Text),
-                Convert.ToDouble(CantidadTextBox.Text), Importe,Convert.ToDateTime(fechaTextBox.Text)); 
+                Convert.ToDouble(CantidadTextBox.Text), Importe, Convert.ToDateTime(fechaTextBox.Text));
             ViewState["Entrada"] = entrada;
             this.BindGrid();
             foreach (var item in entrada.Detalle)
@@ -214,6 +215,9 @@ namespace ProyectoFinalAp2.UI.Registros
                 else
                     Utils.ShowToastr(this.Page, "No Eliminado", "error");
             }
+            else
+                Utils.ShowToastr(this, "No existe", "Error", "error");
+            repositorio.Dispose();
         }
     }
 }

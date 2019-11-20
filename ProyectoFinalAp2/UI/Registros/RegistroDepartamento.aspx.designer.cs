@@ -69,13 +69,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.Button NuevoButton;
 
         /// <summary>
-        /// GuadarButton control.
+        /// GuardarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuadarButton;
+        protected global::System.Web.UI.WebControls.Button GuardarButton;
 
         /// <summary>
         /// EliminarButton control.
@@ -85,23 +85,5 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button EliminarButton;
-
-        /// <summary>
-        /// EliminarRequiredFieldValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator EliminarRequiredFieldValidator;
-
-        /// <summary>
-        /// EliminarRegularExpressionValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator EliminarRegularExpressionValidator;
     }
 }

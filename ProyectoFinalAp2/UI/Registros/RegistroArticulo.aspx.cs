@@ -29,7 +29,7 @@ namespace ProyectoFinalAp2.UI.Registros
                         LlenarCombo();
                     LlenaCampo(user);
                 }
-                    LlenarCombo();
+                LlenarCombo();
             }
 
         }
@@ -176,8 +176,7 @@ namespace ProyectoFinalAp2.UI.Registros
                     Utils.ShowToastr(this.Page, "No Eliminado", "error");
             }
             else
-                EliminarRequiredFieldValidator.IsValid = false;
-            repositorio.Dispose();
+                Utils.ShowToastr(this, "No existe", "Error", "error");
         }
 
     }

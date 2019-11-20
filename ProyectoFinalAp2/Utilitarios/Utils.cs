@@ -16,6 +16,14 @@ namespace ProyectoFinalAp2.Utilidades
             return retorno;
         }
 
+
+        public static DateTime ToFecha(string valor)
+        {
+            DateTime retorno = DateTime.Now;
+            DateTime.TryParse(valor, out retorno);
+            return retorno;
+
+        }
         public static int ToIntObjetos(object valor)
         {
             int retorno = 0;
