@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="panel panel-primary">
-            <div class="panel-heading">Registro Entreda</div>
+            <div class="panel-heading text-primary text-center"> Registro Entreda</div>
             <div class="panel-body">
                 <div class="form-horizontal col-md-12" role="form">
                     <%-- EntradaID--%>
@@ -24,37 +24,43 @@
                     <%--Producto--%>
                     <div class="form-group">
                         <label for="ProductoTextBox" class="col-md-3 control-label input-sm">Producto: </label>
-                        <div class="col-md-4">
-                            <div>
-                                <asp:DropDownList ID="ProductoDropdownList" CssClass=" form-control dropdown-item" AppendDataBoundItems="true" runat="server" Height="2.8em">
-                                </asp:DropDownList>
-                            </div>
+                        <div class="col-md-3">
+                            <asp:DropDownList ID="ProductoDropdownList" AutoPostBack="true" OnSelectedIndexChanged="ProductoDropdownList_SelectedIndexChanged" CssClass=" form-control dropdown-item" AppendDataBoundItems="true" runat="server" Height="2.8em">
+                            </asp:DropDownList>
+                        </div>
+                        <label for="CostoTextBox" class="col-md-1 control-label input-sm">Costo: </label>
+                        <div class="col-md-3">
+                            <asp:TextBox class="form-control input-sm" ReadOnly="true" TextMode="Number" ID="CostoTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
                         </div>
                     </div>
-
                     <%--  Costo--%>
-                    <div class="form-group">
+                    <%--  <div class="form-group">
                         <label for="CostoTextBox" class="col-md-3 control-label input-sm">Costo: </label>
                         <div class="col-md-4">
-                            <asp:TextBox class="form-control input-sm" TextMode="Number" ID="CostoTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
+                            <asp:TextBox class="form-control input-sm"  ReadOnly="true" TextMode="Number"  ID="CostoTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
                         </div>
-                    </div>
+                    </div>--%>
                     <%--Cantidad--%>
                     <div class="form-group">
                         <label for="CantidadTextBox" class="col-md-3 control-label input-sm">Cantidad: </label>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <asp:TextBox class="form-control input-sm" TextMode="Number" ID="CantidadTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
                         </div>
+                        <label for="FechaVencimientoTextBox" class="col-md-1 control-label input-sm">Fecha de vencimiento: </label>
+                        <div class="col-md-3">
+                            <asp:TextBox CssClass="form-control" ID="FechaVencimientoTextBox" TextMode="Date" runat="server"></asp:TextBox>
+                        </div>
+                          <asp:Button class="btn btn-info btn-sm" ID="AgregardoButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" />
                     </div>
                     <%--Fecha--%>
-                    <div class="form-group">
+                    <%--<div class="form-group">
                         <label for="FechaVencimientoTextBox" class="col-md-3 control-label input-sm">Fecha de vencimiento: </label>
                         <div class="col-md-4">
                             <asp:TextBox CssClass="form-control" ID="FechaVencimientoTextBox" TextMode="Date" runat="server"></asp:TextBox>
-                        </div>
+                        </div>--%>
                         <%-- Agregar--%>
-                        <asp:Button class="btn btn-info btn-sm" ID="AgregardoButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" />
-                    </div>
+                      <%--  <asp:Button class="btn btn-info btn-sm" ID="AgregardoButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" />
+                    </div>--%>
 
                     <div class="table-responsive">
                         <div class="center">
@@ -78,9 +84,10 @@
                         </div>
                     </div>
 
+                    <%--        Total Invertido en Producto--%>
                     <div class="form-group">
                         <label for="Total:" class="col-md-3 control-label input-sm">Total: </label>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <asp:TextBox class="form-control input-sm" ReadOnly="True" ID="TotalTextBox" Text="0" runat="server"></asp:TextBox>
                         </div>
                     </div>

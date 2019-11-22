@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <div class="panel panel-info">
-            <div class="panel-heading">Registro Usuario</div>
+        <div class="panel panel-primary">
+            <div class="panel-heading text-primary text-center"> Registro Usuario</div>
             <div class="panel-body">
                 <div class="form-horizontal col-md-12" role="form">
                     <%--UsuarioId--%>

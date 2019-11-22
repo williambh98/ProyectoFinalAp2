@@ -14,7 +14,6 @@ namespace ProyectoFinalAp2Test
         public void GuardarTest()
         {
             Articulo articulo = new Articulo();
-            articulo.ArticuloID = 0;
             articulo.IDProveedor = 1;
             articulo.DepartamentoId = 1;
             articulo.Cantidad = 1;

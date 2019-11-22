@@ -61,7 +61,7 @@ namespace ProyectoFinalAp2.UI.Registros
         {
             IdTextBox.Text = departamento.DepartamentoId.ToString();
             NombreTextBox.Text = departamento.Nombre;
-            fechaTextBox.Text = departamento.Fecha.ToString();
+            fechaTextBox.Text = departamento.Fecha.ToString("yyyy-MM-dd");
         }
         private bool ExisteEnLaBaseDeDatos()
         {

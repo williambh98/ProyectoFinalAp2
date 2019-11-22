@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <div class="panel panel-info">
-            <div class="panel-heading">Registros Proveedores</div>
+        <div class="panel panel-primary">
+            <div class="panel-heading text-primary text-center"> Registros Proveedores</div>
             <div class="panel-body">
                 <div class="form-horizontal col-md-12" role="form">
                     <%--Proveedores--%>
@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <label for="EmailTextBox" class="col-md-3 control-label input-sm">Email:</label>
                         <div class="col-md-6">
-                            <asp:TextBox ID="EmailTextBox" placeholder="Ingrese el Email" Enabled="true"  runat="server"
+                            <asp:TextBox ID="EmailTextBox" placeholder="Ingrese el Email" Enabled="true" runat="server"
                                 Class="form-control input-sm"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Email" runat="server" MaxLength="200"
                                 ControlToValidate="EmailTextBox"
@@ -66,8 +66,8 @@
                     <%--  Telefono--%>
                     <div class="form-group">
                         <label for="TelefonoTextBox" class="col-md-3 control-label input-sm">Telefono:</label>
-                        <div class="col-md-5">
-                            <asp:TextBox ID="TelefonoTextBox" placeholder="Ingrese el Telefono" Enabled="true"  runat="server"
+                        <div class="col-md-6">
+                            <asp:TextBox ID="TelefonoTextBox" placeholder="Ingrese el Telefono" Enabled="true" runat="server"
                                 Class="form-control input-sm"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Telefono" runat="server" MaxLength="200"
                                 ControlToValidate="TelefonoTextBox"
@@ -78,8 +78,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-offset-4 col-sm-10">
+                    <div class="panel-footer">
+                        <div class="text-center">
                             <div class=" btn btn-primary glyphicon glyphicon-plus ">
                                 <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" BackColor="Transparent" BorderWidth="0" OnClick="NuevoButton_Click"></asp:Button>
                             </div>

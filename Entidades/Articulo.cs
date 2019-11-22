@@ -27,6 +27,7 @@ namespace Entidades
         public double Precio { get; set; }
         public DateTime FechaCreacion { get; set; }
         public double Cantidad { get; set; }
+        public decimal Ganancia { get; set; }
 
 
         public Articulo()
@@ -38,12 +39,13 @@ namespace Entidades
             Descripcion = string.Empty;
             Costo = 0;
             Precio = 0;
-            FechaCreacion = DateTime.Now;
             Cantidad = 0;
+            Ganancia = 0;
+            FechaCreacion = DateTime.Now;
+
 
         }
-
-        public Articulo(int articuloID, int departamentoId, int categoriaId, int iDProveedor, string descripcion, double costo, double precio, DateTime fechaCreacion, double cantidad)
+        public Articulo(int articuloID, int departamentoId, int categoriaId, int iDProveedor, string descripcion, double costo, double precio, DateTime fechaCreacion, double cantidad, decimal ganancia)
         {
             ArticuloID = articuloID;
             DepartamentoId = departamentoId;
@@ -54,6 +56,7 @@ namespace Entidades
             Precio = precio;
             FechaCreacion = fechaCreacion;
             Cantidad = cantidad;
+            Ganancia = ganancia;
         }
     }
 }

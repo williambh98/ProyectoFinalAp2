@@ -44,6 +44,7 @@ namespace Entidades
             Costo = costo;
             Importe = importe;
             FechaVencimiento = fechaVencimiento;
+            Cantidad = cantidad;
         }
     }
 }

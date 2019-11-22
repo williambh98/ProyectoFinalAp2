@@ -35,9 +35,9 @@ namespace Entidades
             Detalle = detalle;
         }
 
-        public void AgregarDetalle(int id,int EntradaID,int articuloId, double precio, double Cantidad, double importe,DateTime FechaVencimiento)
+        public void AgregarDetalle(int id,int EntradaID,int articuloId, double Cantidad, double Costo, double importe,DateTime FechaVencimiento)
         {
-            this.Detalle.Add(new EntradaDetalle(id, EntradaID, articuloId, precio, Cantidad, importe,FechaVencimiento));
+            this.Detalle.Add(new EntradaDetalle(id, EntradaID, articuloId,Cantidad, Costo, importe,FechaVencimiento));
         }
 
         public void RemoverDetalle(int Index)

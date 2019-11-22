@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <div class="panel panel-info">
-            <div class="panel-heading">Registros Departamento</div>
+        <div class="panel panel-primary">
+            <div class="panel-heading text-primary text-center">Registros Departamento</div>
             <div class="panel-body">
                 <div class="form-horizontal col-md-12" role="form">
                     <%--DepartamentoID--%>
@@ -35,8 +35,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-offset-4 col-sm-10">
+                    <div class="panel-footer">
+                        <div class="text-center">
                             <div class=" btn btn-primary glyphicon glyphicon-plus ">
                                 <asp:Button ID="NuevoButton" runat="server" Text="Nuevo" BackColor="Transparent" BorderWidth="0" OnClick="NuevoButton_Click"></asp:Button>
                             </div>

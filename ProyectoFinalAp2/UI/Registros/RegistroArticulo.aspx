@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="panel panel-primary">
-            <div class="panel-heading">Registro Articulo</div>
+            <div class="panel-heading text-primary text-center">Registro Articulo</div>
             <div class="panel-body">
                 <div class="form-horizontal col-md-12" role="form">
                     <%-- ArticuloID--%>
@@ -70,31 +70,40 @@
                         <div class="form-group">
                             <label for="CostoTextBox" class="col-md-3 control-label input-sm">Costo: </label>
                             <div class="col-md-2">
-                                <asp:TextBox class="form-control input-sm" TextMode="Number" ID="CostoTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
+                                <asp:TextBox class="form-control input-sm" TextMode="Number" ID="CostoTextBox" OnTextChanged="CostoTextBox_TextChanged" Text="0" runat="server" Visible="true"></asp:TextBox>
                             </div>
+
                             <%--Precio--%>
                             <label for="PrecioTextBox" class="col-md-1 control-label input-sm">Precio: </label>
                             <div class="col-md-2">
-                                <asp:TextBox class="form-control input-sm" TextMode="Number" ID="PrecioTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Cantidad:" class="col-md-3 control-label input-sm">Cantidad: </label>
-                            <div class="col-md-5">
-                                <asp:TextBox class="form-control input-sm" ReadOnly="True" ID="CantidadTextBox" Text="0" runat="server"></asp:TextBox>
+                                <asp:TextBox class="form-control input-sm" TextMode="Number" ID="PrecioTextBox" OnTextChanged="PrecioTextBox_TextChanged" Text="0" runat="server"  Visible="true"></asp:TextBox>
                             </div>
                         </div>
 
-                   <div class="panel-footer">
+                        <%--Cantidad--%>
+                        <div class="form-group">
+                            <label for="Cantidad:" class="col-md-3 control-label input-sm">Cantidad: </label>
+                            <div class="col-md-2">
+                                <asp:TextBox class="form-control input-sm" ReadOnly="True" ID="CantidadTextBox" Text="0" runat="server"></asp:TextBox>
+                            </div>
+
+                            <%--Ganancia--%>
+                            <label for="GananciaTextBox" class="col-md-1 control-label input-sm">Ganancia: </label>
+                            <div class="col-md-2">
+                                <asp:TextBox class="form-control input-sm" ReadOnly="True" TextMode="Number" ID="GananciaTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
+                            </div>
+                        </div>
+
+                        <div class="panel-footer">
                             <div class="text-center">
                                 <div class="form-group" style="display: inline-block">
 
                                     <asp:Button Text="Nuevo" CssClass="btn btn-warning btn-sm" runat="server" ID="NuevoButton" OnClick="NuevoButton_Click" />
                                     <asp:Button Text="Guardar" CssClass="btn btn-success btn-sm" runat="server" ID="GuadarButton" OnClick="GuardarButton_Click" ValidationGroup="Guardar" />
-                                    <asp:Button Text="Eliminar" CssClass="btn btn-danger btn-sm" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />                              
+                                    <asp:Button Text="Eliminar" CssClass="btn btn-danger btn-sm" runat="server" ID="EliminarButton" OnClick="EliminarButton_Click" />
                                 </div>
                             </div>
-                      </div>
+                        </div>
                     </div>
                 </div>
             </div>

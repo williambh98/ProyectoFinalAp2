@@ -33,6 +33,8 @@ namespace ProyectoFinalAp2.UI.Registros
             }
 
         }
+
+        // Metodo utilizado.
         private void LlenarCombo()
         {
             DepartamentoDropdownList.Items.Clear();
@@ -70,6 +72,7 @@ namespace ProyectoFinalAp2.UI.Registros
             articulo.Descripcion = DescripcionTextBox.Text;
             articulo.Costo = Utils.ToDouble(CostoTextBox.Text);
             articulo.Precio = Utils.ToDouble(PrecioTextBox.Text);
+            articulo.Ganancia = Utils.ToDecimal(GananciaTextBox.Text);
             articulo.FechaCreacion = DateTime.Now;
             return articulo;
         }
@@ -85,7 +88,8 @@ namespace ProyectoFinalAp2.UI.Registros
             CostoTextBox.Text = articulo.Costo.ToString();
             PrecioTextBox.Text = articulo.Precio.ToString();
             CantidadTextBox.Text = articulo.Cantidad.ToString();
-            fechaTextBox.Text = articulo.FechaCreacion.ToString();
+            GananciaTextBox.Text = articulo.Ganancia.ToString();
+            fechaTextBox.Text = articulo.FechaCreacion.ToString("yyyy-MM-dd");
         }
 
         public void Limpiar()
@@ -98,6 +102,7 @@ namespace ProyectoFinalAp2.UI.Registros
             CostoTextBox.Text = 0.ToString();
             PrecioTextBox.Text = 0.ToString();
             CantidadTextBox.Text = 0.ToString();
+            GananciaTextBox.Text = 0.ToString();
             fechaTextBox.Text = DateTime.Now.ToString();
         }
 
@@ -112,6 +117,7 @@ namespace ProyectoFinalAp2.UI.Registros
             return (articulo != null);
 
         }
+        //Botones Guardar, Burcar, eliminar
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Articulo> db = new RepositorioBase<Articulo>();
@@ -179,5 +185,44 @@ namespace ProyectoFinalAp2.UI.Registros
                 Utils.ShowToastr(this, "No existe", "Error", "error");
         }
 
+        //Evento de costo y precio
+        protected void CostoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double Costo = Utils.ToDouble(CostoTextBox.Text);
+            double Precio = Utils.ToDouble(PrecioTextBox.Text);
+            if (CostoTextBox.Text != string.Empty || PrecioTextBox.Text != string.Empty)
+            {
+                if (Costo > Precio)
+                {
+                    Utils.ShowToastr(this, "El costo debe ser menor que el precio", "Error", "error");
+                    return;
+                }
+                else
+                    GananciaTextBox.Text = Metodo.Ganancia(Costo, Precio).ToString();
+            }
+            else
+                Utils.ShowToastr(this, "Debe llenar campo Costo", "Error", "error");
+
+        }
+        
+        protected void PrecioTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double Costo = Utils.ToDouble(CostoTextBox.Text);
+            double Precio = Utils.ToDouble(PrecioTextBox.Text);
+
+            if (CostoTextBox.Text != string.Empty || PrecioTextBox.Text != string.Empty)
+            {
+                if (Costo > Precio)
+                {
+                    Utils.ShowToastr(this, "El costo debe ser menor que el precio", "Error", "error");
+                }
+                else
+                    GananciaTextBox.Text = Metodo.Ganancia(Costo, Precio).ToString();
+            }
+            else
+                Utils.ShowToastr(this, "Debe llenar campo Precio", "Error", "error");
+        }
+
+       
     }
 }

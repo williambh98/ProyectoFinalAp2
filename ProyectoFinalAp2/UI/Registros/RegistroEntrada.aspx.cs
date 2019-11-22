@@ -17,7 +17,8 @@ namespace ProyectoFinalAp2.UI.Registros
             fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             if (!Page.IsPostBack)
             {
-
+                LlenarCombo();
+                Limpiar();
                 int id = Utils.ToInt(Request.QueryString["id"]);
                 if (id > 0)
                 {
@@ -26,8 +27,8 @@ namespace ProyectoFinalAp2.UI.Registros
                     if (user == null)
                         Utils.ShowToastr(this, "Id no existe", "Error", "error");
                     else
-                        LlenarCombo();
-                    LLenarCampo(user);
+                        LLenarCampo(user);
+
                 }
                 LlenarCombo();
                 ViewState["Entrada"] = new Entrada();
@@ -45,9 +46,6 @@ namespace ProyectoFinalAp2.UI.Registros
             ProductoDropdownList.DataTextField = "Descripcion";
             ProductoDropdownList.DataBind();
 
-            Articulo articulo = repositorio.Buscar(Utils.ToInt(ProductoDropdownList.SelectedValue));
-            CostoTextBox.Text = articulo.Costo.ToString();
-
         }
         public void Limpiar()
         {
@@ -59,7 +57,9 @@ namespace ProyectoFinalAp2.UI.Registros
             FechaVencimientoTextBox.Text = DateTime.Now.ToString();
             ViewState["Entrada"] = new Entrada();
             GridView.DataSource = null;
+
             this.BindGrid();
+            Entrada ventas = new Entrada(); ProductoDropdownList_SelectedIndexChanged(null, null);
         }
         private Entrada LlenarClase()
         {
@@ -74,13 +74,23 @@ namespace ProyectoFinalAp2.UI.Registros
         private void LLenarCampo(Entrada entrada)
         {
             Limpiar();
-            IdTextBox.Text = entrada.EntradaId.ToString();
-            fechaTextBox.Text = entrada.Fecha.ToString();
+            IdTextBox.Text = entrada.EntradaId.ToString(); 
             TotalTextBox.Text = entrada.Total.ToString();
+            fechaTextBox.Text = entrada.Fecha.ToString("yyyy-MM-dd");
             ViewState["Entrada"] = entrada;
             this.BindGrid();
         }
 
+        protected void ProductoDropdownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ProductoDropdownList.Items.Count > 0)
+            {
+                RepositorioBase<Articulo> repositorio = new RepositorioBase<Articulo>();
+                Articulo articulo = repositorio.Buscar(Utils.ToInt(ProductoDropdownList.SelectedValue));
+                CostoTextBox.Text = articulo.Costo.ToString();
+                repositorio.Dispose();
+            }
+        }
         private bool Validar()
         {
             bool estato = false;
@@ -171,9 +181,9 @@ namespace ProyectoFinalAp2.UI.Registros
             entrada = (Entrada)ViewState["Entrada"];
             double Importe = Convert.ToDouble(CantidadTextBox.Text) * Convert.ToDouble(CostoTextBox.Text);
             entrada.AgregarDetalle
-                (0, Utils.ToInt(IdTextBox.Text),
-                Utils.ToInt(ProductoDropdownList.SelectedValue), Convert.ToDouble(CostoTextBox.Text),
-                Convert.ToDouble(CantidadTextBox.Text), Importe, Convert.ToDateTime(fechaTextBox.Text));
+               (0, Utils.ToInt(IdTextBox.Text),
+                Utils.ToInt(ProductoDropdownList.SelectedValue), Convert.ToDouble(CantidadTextBox.Text),
+                Convert.ToDouble(CostoTextBox.Text), Importe, Convert.ToDateTime(FechaVencimientoTextBox.Text));
             ViewState["Entrada"] = entrada;
             this.BindGrid();
             foreach (var item in entrada.Detalle)
@@ -197,7 +207,6 @@ namespace ProyectoFinalAp2.UI.Registros
             }
 
         }
-
         protected void EliminarButton_Click(object sender, EventArgs e)
         {
             GridViewRow grid = GridView.SelectedRow;
@@ -219,5 +228,7 @@ namespace ProyectoFinalAp2.UI.Registros
                 Utils.ShowToastr(this, "No existe", "Error", "error");
             repositorio.Dispose();
         }
+
+
     }
 }

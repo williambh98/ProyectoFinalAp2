@@ -70,7 +70,7 @@ namespace ProyectoFinalAp2.UI.Registros
             DireccionTextBox.Text = proveedores.Direccion;
             EmailTextBox.Text = proveedores.Email; ;
             TelefonoTextBox.Text = proveedores.Telefono;
-            fechaTextBox.Text = proveedores.Fecha.ToString();
+            fechaTextBox.Text = proveedores.Fecha.ToString("yyyy-MM-dd");
         }
         private bool ExisteEnLaBaseDeDatos()
         {

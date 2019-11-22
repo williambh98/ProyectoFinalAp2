@@ -114,6 +114,15 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox CantidadTextBox;
 
         /// <summary>
+        /// GananciaTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GananciaTextBox;
+
+        /// <summary>
         /// NuevoButton control.
         /// </summary>
         /// <remarks>

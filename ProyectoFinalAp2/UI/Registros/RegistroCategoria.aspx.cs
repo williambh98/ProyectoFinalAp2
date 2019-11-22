@@ -64,7 +64,7 @@ namespace ProyectoFinalAp2.UI.Registros
             IdTextBox.Text = categoria.CategoriaId.ToString();
             CategoriaTextBox.Text = categoria.Nombre;
             DescripcionTextBox.Text = categoria.Descripcion;
-            fechaTextBox.Text = categoria.Fecha.ToString();
+            fechaTextBox.Text = categoria.Fecha.ToString("yyyy-MM-dd");
         }
         private bool ExisteEnLaBaseDeDatos()
         {

@@ -180,6 +180,7 @@ namespace ProyectoFinalAp2.UI.Registros
             EmailTextBox.Text = usuario.Email;
             ContrasenaTextBox.Text = usuario.Contrasena;
             Tipousuario.SelectedValue = (usuario.Administrador == true) ? "0" : "1";
+            fechaTextBox.Text = usuario.Fecha.ToString("yyyy-MM-dd");
 
 
         }

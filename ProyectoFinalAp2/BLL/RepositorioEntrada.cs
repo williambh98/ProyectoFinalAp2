@@ -121,6 +121,8 @@ namespace BLL
             }
             return entrada;
         }
+
+
         public override List<Entrada> GetList(Expression<Func<Entrada, bool>> expression)
         {
             List<Entrada> entradas = new List<Entrada>();
