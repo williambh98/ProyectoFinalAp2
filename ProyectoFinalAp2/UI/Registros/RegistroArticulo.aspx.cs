@@ -70,8 +70,8 @@ namespace ProyectoFinalAp2.UI.Registros
             articulo.CategoriaId = CategoriaDropDownList.SelectedValue.Length;
             articulo.IDProveedor = ProveedorDropDownList.SelectedValue.Length;
             articulo.Descripcion = DescripcionTextBox.Text;
-            articulo.Costo = Utils.ToDouble(CostoTextBox.Text);
-            articulo.Precio = Utils.ToDouble(PrecioTextBox.Text);
+            articulo.Costo = Utils.ToDecimal(CostoTextBox.Text);
+            articulo.Precio = Utils.ToDecimal(PrecioTextBox.Text);
             articulo.Ganancia = Utils.ToDecimal(GananciaTextBox.Text);
             articulo.FechaCreacion = DateTime.Now;
             return articulo;
@@ -115,7 +115,6 @@ namespace ProyectoFinalAp2.UI.Registros
             RepositorioBase<Articulo> db = new RepositorioBase<Articulo>();
             Articulo articulo = db.Buscar(Convert.ToInt32(IdTextBox.Text));
             return (articulo != null);
-
         }
         //Botones Guardar, Burcar, eliminar
         protected void GuardarButton_Click(object sender, EventArgs e)
@@ -123,9 +122,8 @@ namespace ProyectoFinalAp2.UI.Registros
             RepositorioBase<Articulo> db = new RepositorioBase<Articulo>();
             Articulo articulo;
             bool paso = false;
-
+                  
             articulo = LlenarClase();
-
             if (IdTextBox.Text == Convert.ToString(0))
             {
                 paso = db.Guardar(articulo);
@@ -134,7 +132,7 @@ namespace ProyectoFinalAp2.UI.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    Utils.ShowToastr(this.Page, "LLenar este campo", "Error", "error");
+                    Utils.ShowToastr(this.Page, "LLenar el campo ID", "Error", "error");
                     return;
                 }
                 paso = db.Modificar(articulo);
@@ -188,8 +186,8 @@ namespace ProyectoFinalAp2.UI.Registros
         //Evento de costo y precio
         protected void CostoTextBox_TextChanged(object sender, EventArgs e)
         {
-            double Costo = Utils.ToDouble(CostoTextBox.Text);
-            double Precio = Utils.ToDouble(PrecioTextBox.Text);
+            decimal Costo = Utils.ToDecimal(CostoTextBox.Text);
+            decimal Precio = Utils.ToDecimal(PrecioTextBox.Text);
             if (CostoTextBox.Text != string.Empty || PrecioTextBox.Text != string.Empty)
             {
                 if (Costo > Precio)
@@ -207,8 +205,8 @@ namespace ProyectoFinalAp2.UI.Registros
         
         protected void PrecioTextBox_TextChanged(object sender, EventArgs e)
         {
-            double Costo = Utils.ToDouble(CostoTextBox.Text);
-            double Precio = Utils.ToDouble(PrecioTextBox.Text);
+            decimal Costo = Utils.ToDecimal(CostoTextBox.Text);
+            decimal Precio = Utils.ToDecimal(PrecioTextBox.Text);
 
             if (CostoTextBox.Text != string.Empty || PrecioTextBox.Text != string.Empty)
             {

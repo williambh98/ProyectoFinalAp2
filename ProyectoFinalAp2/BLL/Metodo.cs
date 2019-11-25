@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Security;
 
 namespace BLL
 {
@@ -18,15 +21,27 @@ namespace BLL
 
 
         // Calcular Ganancia
-        public static double Ganancia (double Costo, double Precio)
+        public static decimal Ganancia (decimal Costo, decimal Precio)
         {
-            double Ganancia = 0;
+            decimal Ganancia = 0;
             Ganancia = Precio - Costo;
             Ganancia = Ganancia / Costo;
             Ganancia *= 100;
 
             return Ganancia;
         }
-        
+
+        public static string Descripcion(int lista)
+        {
+            RepositorioBase<Articulo> repositorio = new RepositorioBase<Articulo>();
+            Articulo articulo = new Articulo();
+            int id = lista;
+            articulo = repositorio.Buscar(id);
+
+            string art = articulo.Descripcion;
+            return art;
+        }
+      
+
     }
 }

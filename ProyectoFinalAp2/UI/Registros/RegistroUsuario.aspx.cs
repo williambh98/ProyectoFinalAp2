@@ -40,6 +40,8 @@ namespace ProyectoFinalAp2.UI.Registros
             }
 
         }
+
+
         private Usuario LlenarClase()
         {
             Usuario usuario = new Usuario();
@@ -49,35 +51,140 @@ namespace ProyectoFinalAp2.UI.Registros
             usuario.Fecha = DateTime.Now;
             usuario.Email = EmailTextBox.Text;
             usuario.Contrasena = ContrasenaTextBox.Text;
+            usuario.ConfimarContrasena = ConfimarTextBox.Text;
             usuario.Administrador = (Tipousuario.SelectedValue == "0") ? true : false;
             return usuario;
         }
-        protected void GuadarButton_Click(object sender, EventArgs e)
-        {
-            RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
-            Usuario usuario = new Usuario();
-            bool paso = false;
-            Usuario user = LlenarClase();
-            if (user.UsuarioID == 0)
-                paso = repositorio.Guardar(user);
-            else
-                paso = repositorio.Modificar(user);
-            if (paso)
-            {
-          
-                Utils.ShowToastr(this, "Guardado", "Exito", "success");         
-                Limpiar();
-            }
-            else
-            {
-                
-                Utils.ShowToastr(this, "No existe", "Error", "error");
 
-            }
-           
+        private void LlenaCampos(Usuario usuario)
+        {
+            IdTextBox.Text = usuario.UsuarioID.ToString();
+            NombreTextBox.Text = usuario.Nombre;
+            TelefonoTextBox.Text = usuario.Telefono;
+            EmailTextBox.Text = usuario.Email;
+            ContrasenaTextBox.Text = usuario.Contrasena;
+            ConfimarTextBox.Text = usuario.ConfimarContrasena;
+            Tipousuario.SelectedValue = (usuario.Administrador == true) ? "0" : "1";
+            fechaTextBox.Text = usuario.Fecha.ToString("yyyy-MM-dd");
+
+
+        }
+        private void Limpiar()
+        {
+            IdTextBox.Text = "";
+            NombreTextBox.Text = "";
+            TelefonoTextBox.Text = "";
+            EmailTextBox.Text = "";
+            ContrasenaTextBox.Text = "";
+            ConfimarTextBox.Text = " ";
+            Tipousuario.ClearSelection();
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+
+        }
+        private bool ExisteBasedeDatos()
+        {
+            Usuario usuario = new Usuario();
+            int id = Convert.ToInt32(IdTextBox.Text);
+            RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
+            usuario = repositorio.Buscar(id);
+            return usuario != null;
         }
 
 
+        private bool validar()
+        {
+            bool estado = false;
+
+            string s = EmailTextBox.Text;
+            filtrar = t => t.Email.Equals(s);
+            List<Usuario> lista = new List<Usuario>();
+            lista = repositorio.GetList(filtrar);
+            string p = ContrasenaTextBox.Text;
+            string cp = ConfimarTextBox.Text;
+            int comparacion = 0;
+            comparacion = String.Compare(p, cp);
+
+            if (comparacion != 0)
+            {
+                Utils.ShowToastr(this, "Las Contraseñas no son iguales", "Error", "error");
+                PasswwordCustomValidator.Focus();
+                estado = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(IdTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe de estar en cero el ID.", "Error", "Error");
+                estado = true;
+
+            }
+            if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe tener un nombre para guardar", "Error", "error");
+                estado = true;
+            }
+            if (string.IsNullOrWhiteSpace(EmailTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe tener una Email para guardar", "Error", "error");
+                estado = true;
+            }
+
+            if (ContrasenaTextBox.Text.Length < 5 || ContrasenaTextBox.Text.Length > 15)
+            {
+                Utils.ShowToastr(this, "No es una contraseña corrrecta", "Error", "error");
+                estado = true;
+            }
+
+            if (TelefonoTextBox.Text.Length != 10)
+            {
+                Utils.ShowToastr(this, "No es es correcto el numero", "Error", "error");
+                estado = true;
+            }
+
+            if (lista.Count != 0)
+            {
+                Utils.ShowToastr(this, "Esta Email ya existe", "Error", "error");
+                estado = true;
+            }
+            return estado;
+        }
+        protected void GuadarButton_Click(object sender, EventArgs e)
+        {
+            if (validar())
+            {
+                return;
+            }
+            else
+            {
+                RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
+                bool paso = false;
+                Usuario usuario = LlenarClase();
+
+                if (Convert.ToInt32(IdTextBox.Text) == 0)
+                {
+                    paso = repositorio.Guardar(usuario);
+                    Utils.ShowToastr(this, "Guardado", "Exito", "success");
+                    Limpiar();
+                }
+                else
+                {
+                    if (!ExisteBasedeDatos())
+                    {
+                        Utils.ShowToastr(this, "No existe", "Error", "Error");
+                        return;
+                    }
+                    else
+                    {
+                        paso = repositorio.Modificar(usuario);
+                        Utils.ShowToastr(this, "Modificado", "Exito", "success");
+
+                    }
+                }
+                if (paso)
+                {
+                    Limpiar();
+                }
+            }
+        }
 
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
@@ -93,12 +200,12 @@ namespace ProyectoFinalAp2.UI.Registros
             {
                 if (repositorio.Eliminar(id))
                 {
-                   
-                    MostrarMensaje("correcto", "Registro Eliminado");
+
+                    Utils.ShowToastr(this, "Eliminado", "Exito", "success");
                     Limpiar();
                 }
                 else
-                    MostrarMensaje("Incorrecto", "Registro No eliminado"); ;
+                    Utils.ShowToastr(this, "No elimado","Error", "Error");
             }
             else
                 Utils.ShowToastr(this, "No existe", "Error", "error");
@@ -112,87 +219,15 @@ namespace ProyectoFinalAp2.UI.Registros
             if (usuario != null)
             {
                 LlenaCampos(usuario);
-                MostrarMensaje("correcto", "Registro Encontrado");
+                Utils.ShowToastr(this, "Encontrado", "Exito", "success");
             }
             else
             {
                 Limpiar();
-                MostrarMensaje("Incorrecto", "Error no se encuentra");
+                Utils.ShowToastr(this, "No Encontrado", "Error", "error");
             }
         }
-        private bool Email()
-        {
-            bool HayErrores = false;
-            filtrar = t => t.Email.Equals(EmailTextBox.Text);
 
-            if (repositorio.GetList(filtrar).Count() != 0)
-            {
-                MostrarMensaje("Error", "Este Email ya existe");
-                HayErrores = true;
-            }
-            return HayErrores;
-        }
-        private bool HayErrores()
-        {
-            bool HayErrores = false;
-            if (TelefonoTextBox.Text.Length != 10)
-            {
-                MostrarMensaje("Error", "no es un numero de telefono correcto");
-                HayErrores = true;
-            }
-            if (String.IsNullOrWhiteSpace(IdTextBox.Text))
-            {
-                MostrarMensaje("Error", "Debe tener un Id para guardar");
-                HayErrores = true;
-            }
-
-            filtrar = t => t.Email.Equals(EmailTextBox.Text);
-
-            if (repositorio.GetList(filtrar).Count() != 0)
-            {
-                MostrarMensaje("Error", "Este Email ya existe");
-                HayErrores = true;
-            }
-            filtro = t => t.Nombre.Equals(NombreTextBox.Text);
-
-            if (repositorio.GetList(filtro).Count() != 0)
-            {
-                MostrarMensaje("Error", "Este Nombre ya existe");
-                HayErrores = true;
-            }
-            return HayErrores;
-        }
-
-        private void MostrarMensaje(String tipo, string Mensaje)
-        {
-
-            ErrorLabel.Text = Mensaje;
-            if (tipo.ToLower() == "Correcto".ToLower())
-                ErrorLabel.CssClass = "alert-success";
-            else
-                ErrorLabel.CssClass = "alert-danger";
-        }
-        private void LlenaCampos(Usuario usuario)
-        {
-            IdTextBox.Text = usuario.UsuarioID.ToString();
-            NombreTextBox.Text = usuario.Nombre;
-            TelefonoTextBox.Text = usuario.Telefono;
-            EmailTextBox.Text = usuario.Email;
-            ContrasenaTextBox.Text = usuario.Contrasena;
-            Tipousuario.SelectedValue = (usuario.Administrador == true) ? "0" : "1";
-            fechaTextBox.Text = usuario.Fecha.ToString("yyyy-MM-dd");
-
-
-        }
-        private void Limpiar()
-        {
-            IdTextBox.Text = "";
-            NombreTextBox.Text = "";
-            TelefonoTextBox.Text = "";
-            EmailTextBox.Text = "";
-            ContrasenaTextBox.Text = "";
-            Tipousuario.ClearSelection();
-
-        }
     }
-    }
+
+}

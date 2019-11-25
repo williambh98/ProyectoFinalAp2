@@ -4,6 +4,7 @@ using ProyectoFinalAp2.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,6 +13,9 @@ namespace ProyectoFinalAp2.UI.Registros
 {
     public partial class RegistroProveedores : System.Web.UI.Page
     {
+        RepositorioBase<Proveedores> repositorio = new RepositorioBase<Proveedores>();
+        Expression<Func<Proveedores, bool>> filtro = x => true;
+        Expression<Func<Proveedores, bool>> filtrar = x => true;
         protected void Page_Load(object sender, EventArgs e)
         {
             fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -45,7 +49,7 @@ namespace ProyectoFinalAp2.UI.Registros
             DireccionTextBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
             TelefonoTextBox.Text = string.Empty;
-            fechaTextBox.Text = DateTime.Now.ToString();
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
@@ -80,6 +84,41 @@ namespace ProyectoFinalAp2.UI.Registros
 
         }
 
+        private bool validar()
+        {
+
+            bool Validar = false;
+            List<Proveedores> lista = new List<Proveedores>();
+            lista = repositorio.GetList(filtrar);
+
+            if (String.IsNullOrWhiteSpace(IdTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Id no puede estar vacío", "Error", "error");
+                Validar = true;
+            }
+            if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
+            {
+                Utils.ShowToastr(this, "debe de llenar el campo", "Error", "error");
+                Validar = true;
+            }
+            if (string.IsNullOrWhiteSpace(DireccionTextBox.Text))
+            {
+                Utils.ShowToastr(this, "debe de llenar el campo", "Error", "error");
+                Validar = true;
+            }
+            if (lista.Count != 0)
+            {
+                Utils.ShowToastr(this, "Este correo ya existe", "Error", "error");
+                Validar = true;
+            }
+            if (String.IsNullOrWhiteSpace(TelefonoTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Descripcion no puede estar vacío", "Error", "error");
+                Validar = true;
+            }
+
+            return Validar;
+        }
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
@@ -87,8 +126,12 @@ namespace ProyectoFinalAp2.UI.Registros
             bool paso = false;
 
             proveedores = LlenaClase();
-
-            if (IdTextBox.Text == Convert.ToString(0))
+            if (validar())
+            {
+                return;
+            }
+            else
+          if (IdTextBox.Text == Convert.ToString(0))
             {
                 paso = db.Guardar(proveedores);
             }
@@ -96,7 +139,7 @@ namespace ProyectoFinalAp2.UI.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    Utils.ShowToastr(this.Page, "LLenar este campo", "Error", "error");
+                    Utils.ShowToastr(this.Page, "LLenar este campo ID", "Error", "error");
                     return;
                 }
                 paso = db.Modificar(proveedores);

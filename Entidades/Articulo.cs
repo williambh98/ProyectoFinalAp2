@@ -23,10 +23,10 @@ namespace Entidades
         [ForeignKey("IDProveedor")]
         public virtual Proveedores Proveedores { get; set; }
         public string Descripcion { get; set; }
-        public double Costo { get; set; }
-        public double Precio { get; set; }
+        public decimal Costo { get; set; }
+        public decimal Precio { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public double Cantidad { get; set; }
+        public decimal Cantidad { get; set; }
         public decimal Ganancia { get; set; }
 
 
@@ -45,7 +45,7 @@ namespace Entidades
 
 
         }
-        public Articulo(int articuloID, int departamentoId, int categoriaId, int iDProveedor, string descripcion, double costo, double precio, DateTime fechaCreacion, double cantidad, decimal ganancia)
+        public Articulo(int articuloID, int departamentoId, int categoriaId, int iDProveedor, string descripcion, decimal costo, decimal precio, DateTime fechaCreacion, decimal cantidad, decimal ganancia)
         {
             ArticuloID = articuloID;
             DepartamentoId = departamentoId;

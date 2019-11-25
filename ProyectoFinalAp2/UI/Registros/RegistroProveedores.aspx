@@ -12,7 +12,9 @@
                     <div class="form-group">
                         <label for="IdTextBox" class="col-md-3 control-label input-sm">ID: </label>
                         <div class="col-md-4">
-                            <asp:TextBox CssClass="form-control input-sm" TextMode="Number" ID="IdTextBox" Text="0" runat="server"></asp:TextBox>
+                            <asp:TextBox CssClass="form-control input-sm" TextMode="Number" ID="IdTextBox" Text="0"  runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="IdRFV" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="IdTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*No puede estar vacío</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="IdREV" runat="server" ErrorMessage="Solo Números" ForeColor="Red" ValidationExpression="^[0-9]*$" ControlToValidate="IdTextBox" ValidationGroup="Guardar">Solo Números</asp:RegularExpressionValidator>
                         </div>
                         <asp:Button CssClass="col-md-1 btn btn-info btn-sm" ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
                         <label for="fechaTextBox" class="col-md-2 control-label input-sm">Fecha: </label>
@@ -32,6 +34,7 @@
                                 Display="Dynamic" SetFocusOnError="True"
                                 ToolTip="Campo Descripcion obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Nombre
                             </asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="NombreREV" runat="server" ErrorMessage="Solo Letras" ControlToValidate="NombreTextBox" ForeColor="Red" ValidationExpression="^[a-z &amp; A-Z]*$" ValidationGroup="Guardar">Solo Letras</asp:RegularExpressionValidator>
                         </div>
                     </div>
 
@@ -46,6 +49,7 @@
                                 Display="Dynamic" SetFocusOnError="True"
                                 ToolTip="Campo Descripcion obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Direccion
                             </asp:RequiredFieldValidator>
+                              <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Solo Letras" ControlToValidate="NombreTextBox" ForeColor="Red" ValidationExpression="^[a-z &amp; A-Z]*$" ValidationGroup="Guardar">Solo Letras</asp:RegularExpressionValidator>
                         </div>
                     </div>
 
@@ -53,7 +57,7 @@
                     <div class="form-group">
                         <label for="EmailTextBox" class="col-md-3 control-label input-sm">Email:</label>
                         <div class="col-md-6">
-                            <asp:TextBox ID="EmailTextBox" placeholder="Ingrese el Email" Enabled="true" runat="server"
+                            <asp:TextBox ID="EmailTextBox" placeholder="micorreo@gmail.com" Enabled="true" runat="server"
                                 Class="form-control input-sm"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Email" runat="server" MaxLength="200"
                                 ControlToValidate="EmailTextBox"
@@ -61,13 +65,14 @@
                                 Display="Dynamic" SetFocusOnError="True"
                                 ToolTip="Campo Email obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Email
                             </asp:RequiredFieldValidator>
+                              <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Solo Letras" ControlToValidate="NombreTextBox" ForeColor="Red" ValidationExpression="^[a-z &amp; A-Z]*$" ValidationGroup="Guardar">Solo Letras</asp:RegularExpressionValidator>
                         </div>
                     </div>
                     <%--  Telefono--%>
                     <div class="form-group">
                         <label for="TelefonoTextBox" class="col-md-3 control-label input-sm">Telefono:</label>
                         <div class="col-md-6">
-                            <asp:TextBox ID="TelefonoTextBox" placeholder="Ingrese el Telefono" Enabled="true" runat="server"
+                            <asp:TextBox ID="TelefonoTextBox" placeholder="000-000-0000" MaxLength="10" Enabled="true" runat="server"
                                 Class="form-control input-sm"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Telefono" runat="server" MaxLength="200"
                                 ControlToValidate="TelefonoTextBox"
@@ -75,6 +80,7 @@
                                 Display="Dynamic" SetFocusOnError="True"
                                 ToolTip="Campo Telefono obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Telefono
                             </asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator" runat="server" ErrorMessage="Solo Números" ForeColor="Red" ValidationExpression="^[0-9]*$" ControlToValidate="TelefonoTextBox" ValidationGroup="Guardar">Solo Números</asp:RegularExpressionValidator>
                         </div>
                     </div>
 

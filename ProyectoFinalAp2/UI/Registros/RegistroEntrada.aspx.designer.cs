@@ -24,6 +24,24 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
 
         /// <summary>
+        /// Id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Id;
+
+        /// <summary>
+        /// IdEntrada control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator IdEntrada;
+
+        /// <summary>
         /// BuscarButton control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,24 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CantidadTextBox;
+
+        /// <summary>
+        /// cantidadRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator cantidadRFV;
+
+        /// <summary>
+        /// IdREV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator IdREV;
 
         /// <summary>
         /// FechaVencimientoTextBox control.

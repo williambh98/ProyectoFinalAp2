@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="panel panel-primary">
-            <div class="panel-heading text-primary text-center"> Registro Entreda</div>
+            <div class="panel-heading text-primary text-center">Registro Entreda</div>
             <div class="panel-body">
                 <div class="form-horizontal col-md-12" role="form">
                     <%-- EntradaID--%>
@@ -13,6 +13,9 @@
                         <label for="IdTextBox" class="col-md-3 control-label input-sm">ID: </label>
                         <div class="col-md-4">
                             <asp:TextBox CssClass="form-control input-sm" TextMode="Number" ID="IdTextBox" Text="0" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Id" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="IdTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*No puede estar vacío</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="IdEntrada" runat="server" ErrorMessage="Solo Números" ForeColor="Red" ValidationExpression="^[0-9]*$" ControlToValidate="IdTextBox" ValidationGroup="Guardar">Solo Números</asp:RegularExpressionValidator>
+
                         </div>
                         <asp:Button CssClass="col-md-1 btn btn-info btn-sm" ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
                         <label for="fechaTextBox" class="col-md-2 control-label input-sm">Fecha: </label>
@@ -33,34 +36,24 @@
                             <asp:TextBox class="form-control input-sm" ReadOnly="true" TextMode="Number" ID="CostoTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
                         </div>
                     </div>
-                    <%--  Costo--%>
-                    <%--  <div class="form-group">
-                        <label for="CostoTextBox" class="col-md-3 control-label input-sm">Costo: </label>
-                        <div class="col-md-4">
-                            <asp:TextBox class="form-control input-sm"  ReadOnly="true" TextMode="Number"  ID="CostoTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
-                        </div>
-                    </div>--%>
+
                     <%--Cantidad--%>
                     <div class="form-group">
                         <label for="CantidadTextBox" class="col-md-3 control-label input-sm">Cantidad: </label>
                         <div class="col-md-3">
                             <asp:TextBox class="form-control input-sm" TextMode="Number" ID="CantidadTextBox" Text="0" runat="server" Visible="true"></asp:TextBox>
+                             <asp:RequiredFieldValidator ID="cantidadRFV" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="CantidadTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*No puede estar vacío</asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="IdREV" runat="server" ErrorMessage="Solo Números" ForeColor="Red" ValidationExpression="^[0-9]*$" ControlToValidate="CantidadTextBox" ValidationGroup="Guardar">Solo Números</asp:RegularExpressionValidator>
                         </div>
+
+                        <%--Fecha--%>
                         <label for="FechaVencimientoTextBox" class="col-md-1 control-label input-sm">Fecha de vencimiento: </label>
                         <div class="col-md-3">
                             <asp:TextBox CssClass="form-control" ID="FechaVencimientoTextBox" TextMode="Date" runat="server"></asp:TextBox>
                         </div>
-                          <asp:Button class="btn btn-info btn-sm" ID="AgregardoButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" />
+                        <asp:Button class="btn btn-info btn-sm" ID="AgregardoButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" />
                     </div>
-                    <%--Fecha--%>
-                    <%--<div class="form-group">
-                        <label for="FechaVencimientoTextBox" class="col-md-3 control-label input-sm">Fecha de vencimiento: </label>
-                        <div class="col-md-4">
-                            <asp:TextBox CssClass="form-control" ID="FechaVencimientoTextBox" TextMode="Date" runat="server"></asp:TextBox>
-                        </div>--%>
-                        <%-- Agregar--%>
-                      <%--  <asp:Button class="btn btn-info btn-sm" ID="AgregardoButton" runat="server" Text="Agregar" OnClick="AgregarButton_Click" />
-                    </div>--%>
+
 
                     <div class="table-responsive">
                         <div class="center">
@@ -84,7 +77,7 @@
                         </div>
                     </div>
 
-                    <%--        Total Invertido en Producto--%>
+                    <%-- Total Invertido en Producto--%>
                     <div class="form-group">
                         <label for="Total:" class="col-md-3 control-label input-sm">Total: </label>
                         <div class="col-md-3">

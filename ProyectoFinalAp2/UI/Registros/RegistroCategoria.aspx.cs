@@ -42,7 +42,7 @@ namespace ProyectoFinalAp2.UI.Registros
             IdTextBox.Text = 0.ToString();
             CategoriaTextBox.Text = string.Empty;
             DescripcionTextBox.Text = string.Empty;
-            fechaTextBox.Text = DateTime.Now.ToString();
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
         }
         protected void NuevoButton_Click(object sender, EventArgs e)
@@ -73,6 +73,23 @@ namespace ProyectoFinalAp2.UI.Registros
             return (categoria != null);
 
         }
+        private bool validar()
+        {
+            bool estado = false;
+            if (string.IsNullOrWhiteSpace(IdTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe de estar en cero.", "Error", "Error");
+                estado = true;
+
+            }
+
+            if (string.IsNullOrWhiteSpace(DescripcionTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe tener una Descripcion para guardar", "Error", "error");
+                estado = true;
+            }
+            return estado;
+        }
 
         protected void GuadarButton_Click(object sender, EventArgs e)
         {
@@ -81,7 +98,11 @@ namespace ProyectoFinalAp2.UI.Registros
             bool paso = false;
 
             categoria = LlenaClase();
-
+            if (validar())
+            {
+                return;
+            }
+            else
             if (IdTextBox.Text == Convert.ToString(0))
             {
                 paso = db.Guardar(categoria);
@@ -90,7 +111,7 @@ namespace ProyectoFinalAp2.UI.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    Utils.ShowToastr(this.Page, "LLenar este campo", "Error", "error");
+                    Utils.ShowToastr(this.Page, "LLenar este campo ID", "Error", "error");
                     return;
                 }
                 paso = db.Modificar(categoria);

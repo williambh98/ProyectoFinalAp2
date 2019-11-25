@@ -15,22 +15,22 @@ namespace ProyectoFinalAp2
     {
 
         /// <summary>
-        /// txtmobile control.
+        /// EmailTextox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmobile;
+        protected global::System.Web.UI.WebControls.TextBox EmailTextox;
 
         /// <summary>
-        /// txtpwd control.
+        /// ContrasenaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpwd;
+        protected global::System.Web.UI.WebControls.TextBox ContrasenaTextBox;
 
         /// <summary>
         /// btnLogin control.

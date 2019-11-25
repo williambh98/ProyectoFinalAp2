@@ -18,76 +18,81 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%--Menu Inventario--%>
-    <div class="container-">
-        <nav class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="/Default.aspx" style="font-family: Arial; font-size: 16px" ><span class="glyphicon glyphicon-home"></span> Inicio</a>
-                    </li>
+    <form id="form2" runat="server">
+        <%--Menu Inventario--%>
+        <div class="container-">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="/Default.aspx" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-home"></span> Inicio</a>
+                        </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-plus-sign "></span> Registros<span class="caret"></span></a>
-                        <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-                            <li><a href="/UI/Registros/RegistroUsuario.aspx"><span class="glyphicon glyphicon-plus-sign"></span> Usuario</a></li>
-                            <li><a href="/UI/Registros/RegistroArticulo.aspx">Articulo</a></li>
-                            <li><a href="/UI/Registros/RegistroCategoria.aspx">Categoria</a></li>
-                            <li><a href="/UI/Registros/RegistroDepartamento.aspx">Departamento</a></li>
-                            <li><a href="/UI/Registros/RegistroProveedores.aspx">Proveedores</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-plus-sign "></span> Registros<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
+                                <li><a href="/UI/Registros/RegistroUsuario.aspx"><span class="glyphicon glyphicon-plus-sign"></span>Usuario</a></li>
+                                <li><a href="/UI/Registros/RegistroArticulo.aspx">Articulo</a></li>
+                                <li><a href="/UI/Registros/RegistroCategoria.aspx">Categoria</a></li>
+                                <li><a href="/UI/Registros/RegistroDepartamento.aspx">Departamento</a></li>
+                                <li><a href="/UI/Registros/RegistroProveedores.aspx">Proveedores</a></li>
 
-                        </ul>
-                    </li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span> Capturar Inventario<span class="caret"></span></a>
-                        <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-                            <li><a href="/UI/Registros/RegistroEntrada.aspx">Capturar</a></li>
-                        </ul>
-                    </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span>  Capturar Inventario<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
+                                <li><a href="/UI/Registros/RegistroEntrada.aspx">Capturar</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span> Consultas<span class="caret"></span></a>
-                        <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-                            <li><a href="/UI/Consultas/ConsultasArticulo.aspx"> Articulo</a></li>
-                            <li><a href="/UI/Consultas/ConsultasCategoria.aspx"> Categoria</a></li>
-                            <li><a href="/UI/Consultas/ConsultasDepartamento.aspx"> Departamento</a></li>
-                            <li><a href="/UI/Consultas/ConsultasProveedores.aspx"> Proveedores</a></li>
-                            <li><a href="/UI/Consultas/ConsultasUsuario.aspx"> Usuario</a></li>
-                            <li><a href="/UI/Consultas/ConsultasEntrada.aspx"> Inventario</a></li>
-                        </ul>
-                    </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span>  Consultas<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
+                                <li><a href="/UI/Consultas/ConsultasArticulo.aspx">Articulo</a></li>
+                                <li><a href="/UI/Consultas/ConsultasCategoria.aspx">Categoria</a></li>
+                                <li><a href="/UI/Consultas/ConsultasDepartamento.aspx">Departamento</a></li>
+                                <li><a href="/UI/Consultas/ConsultasProveedores.aspx">Proveedores</a></li>
+                                <li><a href="/UI/Consultas/ConsultasUsuario.aspx">Usuario</a></li>
+                                <li><a href="/UI/Consultas/ConsultasEntrada.aspx">Inventario</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown">
-                        <a href="/Login.aspx" style="font-family: Arial; font-size: 16px"><span class=" glyphicon glyphicon-user"></span> Login</a>
-                    </li>
+                        <li class="dropdown">
+                            <a href="/Login.aspx" style="font-family: Arial; font-size: 16px"><span class=" glyphicon glyphicon-user"></span> Login</a>
+                        </li>
+                        <li class="dropdown">
+                            <asp:Button ID="CerrarSesionButton" runat="server" CausesValidation="false" CommandName="Select"
+                                Text="Iniciar Secion " class="btn btn-primary btn-sm" OnClick="CerrarSesionButton_Click" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-lg-block"></div>
 
-                </ul>
-            </div>
-            <div class="clearfix visible-lg-block"></div>
-        </nav>
-    </div>
-
-    <form id="form1" runat="server">
+            </nav>
+        </div>
         <div>
+
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+   
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - System Inventario </p>
+            </footer>
+        </div>
     </form>
-    <div class="container body-content">
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
-        <hr />
-        <footer>
-            <p>&copy; <%: DateTime.Now.Year %> - System Inventario </p>
-        </footer>
-    </div>
 </body>
 </html>

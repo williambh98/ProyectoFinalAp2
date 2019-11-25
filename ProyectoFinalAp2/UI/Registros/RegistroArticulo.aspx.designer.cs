@@ -24,6 +24,24 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
 
         /// <summary>
+        /// IdRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator IdRFV;
+
+        /// <summary>
+        /// IdREV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator IdREV;
+
+        /// <summary>
         /// BuscarButton control.
         /// </summary>
         /// <remarks>
@@ -87,6 +105,15 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.RequiredFieldValidator DescripcionID;
 
         /// <summary>
+        /// NombreREV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator NombreREV;
+
+        /// <summary>
         /// CostoTextBox control.
         /// </summary>
         /// <remarks>
@@ -96,6 +123,24 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox CostoTextBox;
 
         /// <summary>
+        /// RequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
+
+        /// <summary>
+        /// RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator;
+
+        /// <summary>
         /// PrecioTextBox control.
         /// </summary>
         /// <remarks>
@@ -103,6 +148,24 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PrecioTextBox;
+
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+        /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
 
         /// <summary>
         /// CantidadTextBox control.
@@ -132,13 +195,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.Button NuevoButton;
 
         /// <summary>
-        /// GuadarButton control.
+        /// GuardarButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuadarButton;
+        protected global::System.Web.UI.WebControls.Button GuardarButton;
 
         /// <summary>
         /// EliminarButton control.

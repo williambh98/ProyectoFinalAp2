@@ -14,9 +14,10 @@ namespace ProyectoFinalAp2.UI.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             if (!Page.IsPostBack)
             {
+                fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                AjustarFecha();
                 LlenarCombo();
                 Limpiar();
                 int id = Utils.ToInt(Request.QueryString["id"]);
@@ -53,7 +54,7 @@ namespace ProyectoFinalAp2.UI.Registros
             ProductoDropdownList.ClearSelection();
             CantidadTextBox.Text = 0.ToString();
             TotalTextBox.Text = 0.ToString();
-            fechaTextBox.Text = DateTime.Now.ToString();
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             FechaVencimientoTextBox.Text = DateTime.Now.ToString();
             ViewState["Entrada"] = new Entrada();
             GridView.DataSource = null;
@@ -81,6 +82,14 @@ namespace ProyectoFinalAp2.UI.Registros
             this.BindGrid();
         }
 
+        private void AjustarFecha()
+        {
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            DateTime date = new DateTime();
+            date = DateTime.Now;
+            date = date.AddDays(7);
+            FechaVencimientoTextBox.Text = date.ToString("yyyy-MM-dd");
+        }
         protected void ProductoDropdownList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ProductoDropdownList.Items.Count > 0)
@@ -103,6 +112,16 @@ namespace ProyectoFinalAp2.UI.Registros
             if (String.IsNullOrWhiteSpace(IdTextBox.Text))
             {
                 Utils.ShowToastr(this, "Debe tener un Id para guardar", "Error", "error");
+                estato = true;
+            }
+            if (Utils.ToIntObjetos(ProductoDropdownList.SelectedValue) < 1)
+            {
+                Utils.ShowToastr(this, "Todavía no hay un Producto guardado.", "Error", "error");
+                estato = true;
+            }
+            if (String.IsNullOrWhiteSpace(CantidadTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe ingresar cantidad.", "Error", "error");
                 estato = true;
             }
             return estato;
@@ -176,21 +195,29 @@ namespace ProyectoFinalAp2.UI.Registros
         protected void AgregarButton_Click(object sender, EventArgs e)
         {
             Entrada entrada = new Entrada();
-            double total = 0;
+            decimal total = 0;
+
+            int productoID = Utils.ToIntObjetos(ProductoDropdownList.SelectedValue);
+            string descripcion = Metodo.Descripcion(productoID);
+
             entrada.Detalle = new List<EntradaDetalle>();
-            entrada = (Entrada)ViewState["Entrada"];
-            double Importe = Convert.ToDouble(CantidadTextBox.Text) * Convert.ToDouble(CostoTextBox.Text);
-            entrada.AgregarDetalle
-               (0, Utils.ToInt(IdTextBox.Text),
-                Utils.ToInt(ProductoDropdownList.SelectedValue), Convert.ToDouble(CantidadTextBox.Text),
-                Convert.ToDouble(CostoTextBox.Text), Importe, Convert.ToDateTime(FechaVencimientoTextBox.Text));
-            ViewState["Entrada"] = entrada;
-            this.BindGrid();
-            foreach (var item in entrada.Detalle)
+            if (IsValid)
             {
-                total += item.Importe;
+                DateTime date = DateTime.Now.AddDays(7);
+                entrada = (Entrada)ViewState["Entrada"];
+                decimal Importe = Convert.ToDecimal(CantidadTextBox.Text) * Convert.ToDecimal(CostoTextBox.Text);
+                entrada.AgregarDetalle
+                   (0, Utils.ToInt(IdTextBox.Text),
+                    Utils.ToInt(ProductoDropdownList.SelectedValue), descripcion, Convert.ToDecimal(CantidadTextBox.Text),
+                    Convert.ToDecimal(CostoTextBox.Text), Importe, date);
+                ViewState["Entrada"] = entrada;
+                this.BindGrid();
+                foreach (var item in entrada.Detalle)
+                {
+                    total += item.Importe;
+                }
+                TotalTextBox.Text = total.ToString();
             }
-            TotalTextBox.Text = total.ToString();
         }
 
         protected void RemoveLinkButton_Click(object sender, EventArgs e)

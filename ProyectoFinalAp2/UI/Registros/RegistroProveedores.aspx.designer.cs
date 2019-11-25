@@ -24,6 +24,24 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
 
         /// <summary>
+        /// IdRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator IdRFV;
+
+        /// <summary>
+        /// IdREV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator IdREV;
+
+        /// <summary>
         /// BuscarButton control.
         /// </summary>
         /// <remarks>
@@ -60,6 +78,15 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Nombre;
 
         /// <summary>
+        /// NombreREV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator NombreREV;
+
+        /// <summary>
         /// DireccionTextBox control.
         /// </summary>
         /// <remarks>
@@ -76,6 +103,15 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Direccion;
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
         /// EmailTextBox control.
@@ -96,6 +132,15 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Email;
 
         /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+
+        /// <summary>
         /// TelefonoTextBox control.
         /// </summary>
         /// <remarks>
@@ -112,6 +157,15 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Telefono;
+
+        /// <summary>
+        /// RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator;
 
         /// <summary>
         /// NuevoButton control.

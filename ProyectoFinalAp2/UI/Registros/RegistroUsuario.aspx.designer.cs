@@ -24,6 +24,24 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox IdTextBox;
 
         /// <summary>
+        /// IdRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator IdRFV;
+
+        /// <summary>
+        /// IdREV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator IdREV;
+
+        /// <summary>
         /// BuscarButton control.
         /// </summary>
         /// <remarks>
@@ -51,13 +69,22 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
 
         /// <summary>
-        /// Nombre control.
+        /// NombreRFV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Nombre;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NombreRFV;
+
+        /// <summary>
+        /// NombreREV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator NombreREV;
 
         /// <summary>
         /// TelefonoTextBox control.
@@ -69,13 +96,22 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.TextBox TelefonoTextBox;
 
         /// <summary>
-        /// TelefonoID control.
+        /// Telefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator TelefonoID;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Telefono;
+
+        /// <summary>
+        /// RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator;
 
         /// <summary>
         /// EmailTextBox control.
@@ -85,14 +121,6 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
-
-        /// <summary>
-        /// Email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
 
         /// <summary>
         /// Tipousuario control.
@@ -120,6 +148,33 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Contrasena;
+
+        /// <summary>
+        /// ConfimarTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ConfimarTextBox;
+
+        /// <summary>
+        /// RequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
+
+        /// <summary>
+        /// PasswwordCustomValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator PasswwordCustomValidator;
 
         /// <summary>
         /// ErrorLabel control.

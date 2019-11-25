@@ -42,7 +42,7 @@ namespace ProyectoFinalAp2.UI.Registros
         {
             IdTextBox.Text = 0.ToString();
             NombreTextBox.Text = string.Empty;
-            fechaTextBox.Text = DateTime.Now.ToString();
+            fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         protected void NuevoButton_Click(object sender, EventArgs e)
         {
@@ -63,6 +63,7 @@ namespace ProyectoFinalAp2.UI.Registros
             NombreTextBox.Text = departamento.Nombre;
             fechaTextBox.Text = departamento.Fecha.ToString("yyyy-MM-dd");
         }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Departamento> db = new RepositorioBase<Departamento>();
@@ -71,6 +72,23 @@ namespace ProyectoFinalAp2.UI.Registros
 
         }
 
+        private bool validar()
+        {
+            bool estado = false;
+            if (string.IsNullOrWhiteSpace(IdTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe de estar en cero.", "Error", "Error");
+                estado = true;
+
+            }
+            if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
+            {
+                Utils.ShowToastr(this, "Debe tener un nombre para guardar", "Error", "error");
+                estado = true;
+            }
+
+            return estado;
+        }
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Departamento> db = new RepositorioBase<Departamento>();
@@ -78,8 +96,12 @@ namespace ProyectoFinalAp2.UI.Registros
             bool paso = false;
 
             departamento = LlenaClase();
-
-            if (IdTextBox.Text == Convert.ToString(0))
+            if (validar())
+            {
+                return;
+            }
+            else
+          if (IdTextBox.Text == Convert.ToString(0))
             {
                 paso = db.Guardar(departamento);
             }
@@ -87,7 +109,7 @@ namespace ProyectoFinalAp2.UI.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    Utils.ShowToastr(this.Page, "LLenar este campo", "Error", "error");
+                    Utils.ShowToastr(this.Page, "LLenar este campo ID", "Error", "error");
                     return;
                 }
                 paso = db.Modificar(departamento);
