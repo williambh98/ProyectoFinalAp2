@@ -37,16 +37,13 @@ namespace Entidades
             FechaVencimiento = DateTime.Now;
         }
 
-        public EntradaDetalle(int id, int entradaId, int articuloID, string descripcion, decimal cantidad, decimal costo, decimal importe, DateTime fechaVencimiento)
-        {
-            Id = id;
-            EntradaId = entradaId;
+        public EntradaDetalle(int articuloID, string descripcion, decimal cantidad, decimal costo, decimal importe)
+        {     
             ArticuloID = articuloID;
             Descripcion = descripcion;
             Cantidad = cantidad;
             Costo = costo;
-            Importe = importe;
-            FechaVencimiento = fechaVencimiento;
+            Importe = importe;           
             Cantidad = cantidad;
         }
     }

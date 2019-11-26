@@ -60,7 +60,8 @@
                             <asp:GridView ID="GridView"
                                 runat="server"
                                 class="table table-condensed table-bordered table-responsive"
-                                CellPadding="4" ForeColor="#333333" GridLines="None">
+                                CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="false">
+
 
                                 <AlternatingRowStyle BackColor="White" />
                                 <Columns>
@@ -70,6 +71,14 @@
                                                 Text="Remover " class="btn btn-success btn-sm" OnClick="RemoveLinkButton_Click" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
+                                </Columns>
+                                <Columns>
+                                    <asp:BoundField DataField="ArticuloID" HeaderText="ArticuloID" />
+                                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />                       
+                                    <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" />
+                                    <asp:BoundField DataField="Costo" HeaderText="Costo" />
+                                    <asp:BoundField DataField="Importe" HeaderText="Importe" />
+
                                 </Columns>
                                 <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                 <RowStyle BackColor="#EFF3FB" />

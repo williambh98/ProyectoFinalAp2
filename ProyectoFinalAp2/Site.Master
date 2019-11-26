@@ -71,7 +71,7 @@
                         </li>
                         <li class="dropdown">
                             <asp:Button ID="CerrarSesionButton" runat="server" CausesValidation="false" CommandName="Select"
-                                Text="Iniciar Secion " class="btn btn-primary btn-sm" OnClick="CerrarSesionButton_Click" />
+                                Text="Cerrar Secion " class="btn btn-primary btn-sm" OnClick="CerrarSesionButton_Click" />
                         </li>
                     </ul>
                 </div>

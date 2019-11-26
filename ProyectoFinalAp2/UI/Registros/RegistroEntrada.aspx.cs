@@ -75,7 +75,7 @@ namespace ProyectoFinalAp2.UI.Registros
         private void LLenarCampo(Entrada entrada)
         {
             Limpiar();
-            IdTextBox.Text = entrada.EntradaId.ToString(); 
+            IdTextBox.Text = entrada.EntradaId.ToString();
             TotalTextBox.Text = entrada.Total.ToString();
             fechaTextBox.Text = entrada.Fecha.ToString("yyyy-MM-dd");
             ViewState["Entrada"] = entrada;
@@ -207,9 +207,8 @@ namespace ProyectoFinalAp2.UI.Registros
                 entrada = (Entrada)ViewState["Entrada"];
                 decimal Importe = Convert.ToDecimal(CantidadTextBox.Text) * Convert.ToDecimal(CostoTextBox.Text);
                 entrada.AgregarDetalle
-                   (0, Utils.ToInt(IdTextBox.Text),
-                    Utils.ToInt(ProductoDropdownList.SelectedValue), descripcion, Convert.ToDecimal(CantidadTextBox.Text),
-                    Convert.ToDecimal(CostoTextBox.Text), Importe, date);
+                   (Utils.ToInt(ProductoDropdownList.SelectedValue), descripcion, Convert.ToDecimal(CantidadTextBox.Text),
+                    Convert.ToDecimal(CostoTextBox.Text), Importe);
                 ViewState["Entrada"] = entrada;
                 this.BindGrid();
                 foreach (var item in entrada.Detalle)
