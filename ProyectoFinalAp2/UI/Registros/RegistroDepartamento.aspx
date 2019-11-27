@@ -13,8 +13,7 @@
                         <label for="IdTextBox" class="col-md-3 control-label input-sm">ID: </label>
                         <div class="col-md-4">
                             <asp:TextBox CssClass="form-control input-sm" TextMode="Number" ID="IdTextBox" Text="0" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="Departamento" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="IdTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*No puede estar vacío</asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="DepartamentoInv" runat="server" ErrorMessage="Solo Números" ForeColor="Red" ValidationExpression="^[0-9]*$" ControlToValidate="IdTextBox" ValidationGroup="Guardar">Solo Números</asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="Departamento" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="IdTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*No puede estar vacío</asp:RequiredFieldValidator>                         
                         </div>
                         <asp:Button CssClass="col-md-1 btn btn-info btn-sm" ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
                         <label for="fechaTextBox" class="col-md-2 control-label input-sm">Fecha: </label>
@@ -34,7 +33,7 @@
                                 Display="Dynamic" SetFocusOnError="True"
                                 ToolTip="Campo Descripcion obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Nombre
                             </asp:RequiredFieldValidator>
-                              <asp:RegularExpressionValidator ID="NombreINV" runat="server" ErrorMessage="Solo Letras" ControlToValidate="NombreTextBox" ForeColor="Red" ValidationExpression="^[a-z &amp; A-Z]*$" ValidationGroup="Guardar">Solo Letras</asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="NombreINV" runat="server" ErrorMessage="Solo Letras" ControlToValidate="NombreTextBox" ForeColor="Red" ValidationExpression="^[a-z &amp; A-Z]*$" ValidationGroup="Guardar">Solo Letras</asp:RegularExpressionValidator>
                         </div>
                     </div>
 

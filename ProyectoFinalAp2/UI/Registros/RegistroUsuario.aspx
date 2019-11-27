@@ -16,7 +16,6 @@
                                 <div class="col-md-4">
                                     <asp:TextBox CssClass="form-control input-sm" TextMode="Number" ID="IdTextBox" Text="0" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="IdRFV" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="IdTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*No puede estar vacío</asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="IdREV" runat="server" ErrorMessage="Solo Números" ForeColor="Red" ValidationExpression="^[0-9]*$" ControlToValidate="IdTextBox" ValidationGroup="Guardar">Solo Números</asp:RegularExpressionValidator>
                                 </div>
                                 <asp:Button CssClass="col-md-1 btn btn-info btn-sm" ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
                                 <label for="fechaTextBox" class="col-md-2 control-label input-sm">Fecha: </label>
@@ -30,8 +29,7 @@
                                 <label for="Nombre" class="col-md-3 control-label input-sm">Nombre: </label>
                                 <div class="col-md-6">
                                     <asp:TextBox CssClass="form-control input-sm" ID="NombreTextBox" placeholder="Ingrese el Nombre de Usuario" Enabled="true" runat="server"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="NombreRFV" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="NombreTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="NombreREV" runat="server" ErrorMessage="Solo Letras" ControlToValidate="NombreTextBox" ForeColor="Red" ValidationExpression="^[a-z &amp; A-Z]*$" ValidationGroup="Guardar">Solo Letras</asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="NombreRFV" runat="server" ErrorMessage="No puede estar vacío" ControlToValidate="NombreTextBox" Display="Dynamic" ForeColor="Red" ValidationGroup="Guardar">*</asp:RequiredFieldValidator>                                 
                                 </div>
                             </div>
                             <%--  Telefono--%>
@@ -45,8 +43,7 @@
                                         ErrorMessage="Campo Telefono obligatorio" ForeColor="Red"
                                         Display="Dynamic" SetFocusOnError="True"
                                         ToolTip="Campo Telefono obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Telefono
-                                    </asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator" runat="server" ErrorMessage="Solo Números" ForeColor="Red" ValidationExpression="^[0-9]*$" ControlToValidate="TelefonoTextBox" ValidationGroup="Guardar">Solo Números</asp:RegularExpressionValidator>
+                                    </asp:RequiredFieldValidator>                          
                                 </div>
                             </div>
                             <%--  Email--%>
@@ -71,13 +68,13 @@
                             <div class="form-group">
                                 <label for="Contrasena" class="col-md-3 control-label input-sm">Contraseña:</label>
                                 <div class="col-md-6">
-                                    <asp:TextBox ID="ContrasenaTextBox" runat="server"
+                                    <asp:TextBox ID="ContraseñaTextBox" placeholder="Contrasena" runat="server"
                                         Class="form-control input-sm"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="Contrasena" runat="server" MaxLength="200"
-                                        ControlToValidate="ContrasenaTextBox"
+                                        ControlToValidate="ContraseñaTextBox"
                                         ErrorMessage="Campo Contrasena obligatorio" ForeColor="Red"
                                         Display="Dynamic" SetFocusOnError="True"
-                                        ToolTip="Campo Contrasena obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Contrasena
+                                        ToolTip="Campo Contrasena obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Contraseña
                                     </asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -86,13 +83,13 @@
                             <div class="form-group">
                                 <label for="Contrasena" class="col-md-3 control-label input-sm">Confimar Contraseña:</label>
                                 <div class="col-md-6">
-                                    <asp:TextBox ID="ConfimarTextBox" runat="server"
+                                    <asp:TextBox ID="ConfimarTextBox" placeholder="Contraseña" runat="server"
                                         Class="form-control input-sm"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server" MaxLength="200"
                                         ControlToValidate="ConfimarTextBox"
                                         ErrorMessage="Campo Confimar obligatorio" ForeColor="Red"
                                         Display="Dynamic" SetFocusOnError="True"
-                                        ToolTip="Campo Contrasena obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Contrasena
+                                        ToolTip="Campo Contrasena obligatorio" ValidationGroup="Guardar">Por favor llenar el campo Contraseña
                                     </asp:RequiredFieldValidator>
                                 </div>
                             </div>

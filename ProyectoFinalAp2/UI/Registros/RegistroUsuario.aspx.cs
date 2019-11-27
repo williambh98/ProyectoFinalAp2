@@ -50,8 +50,7 @@ namespace ProyectoFinalAp2.UI.Registros
             usuario.Telefono = TelefonoTextBox.Text;
             usuario.Fecha = DateTime.Now;
             usuario.Email = EmailTextBox.Text;
-            usuario.Contrasena = ContrasenaTextBox.Text;
-            usuario.ConfimarContrasena = ConfimarTextBox.Text;
+            usuario.Contrasena = Utils.Hash(ContraseñaTextBox.Text);
             usuario.Administrador = (Tipousuario.SelectedValue == "0") ? true : false;
             return usuario;
         }
@@ -62,8 +61,7 @@ namespace ProyectoFinalAp2.UI.Registros
             NombreTextBox.Text = usuario.Nombre;
             TelefonoTextBox.Text = usuario.Telefono;
             EmailTextBox.Text = usuario.Email;
-            ContrasenaTextBox.Text = usuario.Contrasena;
-            ConfimarTextBox.Text = usuario.ConfimarContrasena;
+            ContraseñaTextBox.Text = usuario.Contrasena;
             Tipousuario.SelectedValue = (usuario.Administrador == true) ? "0" : "1";
             fechaTextBox.Text = usuario.Fecha.ToString("yyyy-MM-dd");
 
@@ -75,7 +73,7 @@ namespace ProyectoFinalAp2.UI.Registros
             NombreTextBox.Text = "";
             TelefonoTextBox.Text = "";
             EmailTextBox.Text = "";
-            ContrasenaTextBox.Text = "";
+            ContraseñaTextBox.Text = "";
             ConfimarTextBox.Text = " ";
             Tipousuario.ClearSelection();
             fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -99,7 +97,7 @@ namespace ProyectoFinalAp2.UI.Registros
             filtrar = t => t.Email.Equals(s);
             List<Usuario> lista = new List<Usuario>();
             lista = repositorio.GetList(filtrar);
-            string p = ContrasenaTextBox.Text;
+            string p = ContraseñaTextBox.Text;
             string cp = ConfimarTextBox.Text;
             int comparacion = 0;
             comparacion = String.Compare(p, cp);
@@ -128,7 +126,7 @@ namespace ProyectoFinalAp2.UI.Registros
                 estado = true;
             }
 
-            if (ContrasenaTextBox.Text.Length < 5 || ContrasenaTextBox.Text.Length > 15)
+            if (ContraseñaTextBox.Text.Length < 5 || ContraseñaTextBox.Text.Length > 15)
             {
                 Utils.ShowToastr(this, "No es una contraseña corrrecta", "Error", "error");
                 estado = true;

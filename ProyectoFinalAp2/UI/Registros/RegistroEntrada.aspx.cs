@@ -208,7 +208,7 @@ namespace ProyectoFinalAp2.UI.Registros
                 decimal Importe = Convert.ToDecimal(CantidadTextBox.Text) * Convert.ToDecimal(CostoTextBox.Text);
                 entrada.AgregarDetalle
                    (Utils.ToInt(ProductoDropdownList.SelectedValue), descripcion, Convert.ToDecimal(CantidadTextBox.Text),
-                    Convert.ToDecimal(CostoTextBox.Text), Importe);
+                    Convert.ToDecimal(CostoTextBox.Text), Importe, date);
                 ViewState["Entrada"] = entrada;
                 this.BindGrid();
                 foreach (var item in entrada.Detalle)

@@ -33,15 +33,6 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.RequiredFieldValidator IdRFV;
 
         /// <summary>
-        /// IdREV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator IdREV;
-
-        /// <summary>
         /// BuscarButton control.
         /// </summary>
         /// <remarks>
@@ -76,15 +67,6 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Categoria;
-
-        /// <summary>
-        /// RegularExpressionValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
         /// DescripcionTextBox control.

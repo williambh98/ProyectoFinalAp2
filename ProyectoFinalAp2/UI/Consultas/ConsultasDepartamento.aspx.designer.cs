@@ -87,12 +87,12 @@ namespace ProyectoFinalAp2.UI.Consultas
         protected global::System.Web.UI.WebControls.GridView DatosGridView;
 
         /// <summary>
-        /// MyEstudiantesReportViewer control.
+        /// DepartamentoReportViewer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.Reporting.WebForms.ReportViewer MyEstudiantesReportViewer;
+        protected global::Microsoft.Reporting.WebForms.ReportViewer DepartamentoReportViewer;
     }
 }

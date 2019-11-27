@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using Microsoft.Reporting.WebForms;
 using ProyectoFinalAp2.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -18,10 +19,10 @@ namespace ProyectoFinalAp2.UI.Consultas
         {
             DesdeTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             HastaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            //if (!Page.IsPostBack)
-            //{
-            //    LlenaReport();
-            //}
+            if (!Page.IsPostBack)
+            {
+                LlenaReport();
+            }
         }
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
@@ -73,15 +74,15 @@ namespace ProyectoFinalAp2.UI.Consultas
                 fechaCheckBox.Visible = false;
             }
         }
-        //public void LlenaReport()
-        //{
-        //    ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('');", true);
-        //    MyEstudiantesReportViewer.ProcessingMode = ProcessingMode.Local;
-        //    MyEstudiantesReportViewer.Reset();
-        //    MyEstudiantesReportViewer.LocalReport.ReportPath = Server.MapPath(@"\Reportes\ReportesEstudiante.rdlc");
-        //    MyEstudiantesReportViewer.LocalReport.DataSources.Clear();
-        //    MyEstudiantesReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Estudiantes", Metodo.EvEstudiantes()));
-        //    MyEstudiantesReportViewer.LocalReport.Refresh();
-        //}
+        public void LlenaReport()
+        {
+            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Popup", $"ShowReporte('');", true);
+            CategoriaReportViewer.ProcessingMode = ProcessingMode.Local;
+            CategoriaReportViewer.Reset();
+            CategoriaReportViewer.LocalReport.ReportPath = Server.MapPath(@"\Reportes\ReportesCategoria.rdlc");
+            CategoriaReportViewer.LocalReport.DataSources.Clear();
+            CategoriaReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Categoria", Metodo.INVCategoria()));
+            CategoriaReportViewer.LocalReport.Refresh();
+        }
     }
 }

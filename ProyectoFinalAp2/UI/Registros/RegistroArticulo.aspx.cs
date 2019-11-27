@@ -15,6 +15,7 @@ namespace ProyectoFinalAp2.UI.Registros
         protected void Page_Load(object sender, EventArgs e)
         {
             fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            LlenarCombo();
             if (!Page.IsPostBack)
             {
                 //si llego in id
@@ -25,8 +26,7 @@ namespace ProyectoFinalAp2.UI.Registros
                     Articulo user = repositorio.Buscar(id);
                     if (user == null)
                         Utils.ShowToastr(this, "Id no existe", "Error", "error");
-                    else
-                        LlenarCombo();
+                    else                    
                     LlenaCampo(user);
                 }
                 LlenarCombo();

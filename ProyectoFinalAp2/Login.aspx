@@ -23,8 +23,8 @@
 <body>
     <div class="container">
              
-        <div class="panel" style="background-color: #0094ff">
-            <div class="panel-heading" style="font-family: Arial Black; font-size: 20px; text-align: center; color: Black">CAR DEALER SFM</div>
+        <div class="panel" style="background-color:#008000">
+            <div class="panel-heading" style="font-family: Arial Black; font-size: 20px; text-align: center; color: Black">System Inventario</div>
         </div>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-md-offset-4">
@@ -49,7 +49,7 @@
 
                         </div>
                         <br />
-                        <asp:Button runat="server" Text="Iniciar" class="btn btn-md btn-success btn-block" OnClick="LoginButton_Click" />
+                        <asp:Button runat="server" Text="Iniciar" class="btn btn-md btn-primary btn-block" OnClick="LoginButton_Click" />
                         <label class="checkbox pull-center">
                             <input type="checkbox" value="remember-me">
                             Recuerdame               

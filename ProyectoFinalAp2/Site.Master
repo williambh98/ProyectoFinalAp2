@@ -69,9 +69,11 @@
                         <li class="dropdown">
                             <a href="/Login.aspx" style="font-family: Arial; font-size: 16px"><span class=" glyphicon glyphicon-user"></span> Login</a>
                         </li>
-                        <li class="dropdown">
+                        <li class="form-group">
+                            <div class="col-sm-offset-10 col-sm-12">
                             <asp:Button ID="CerrarSesionButton" runat="server" CausesValidation="false" CommandName="Select"
                                 Text="Cerrar Secion " class="btn btn-primary btn-sm" OnClick="CerrarSesionButton_Click" />
+                                </div>
                         </li>
                     </ul>
                 </div>

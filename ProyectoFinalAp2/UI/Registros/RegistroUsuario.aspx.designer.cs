@@ -33,15 +33,6 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.RequiredFieldValidator IdRFV;
 
         /// <summary>
-        /// IdREV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator IdREV;
-
-        /// <summary>
         /// BuscarButton control.
         /// </summary>
         /// <remarks>
@@ -78,15 +69,6 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.RequiredFieldValidator NombreRFV;
 
         /// <summary>
-        /// NombreREV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator NombreREV;
-
-        /// <summary>
         /// TelefonoTextBox control.
         /// </summary>
         /// <remarks>
@@ -103,15 +85,6 @@ namespace ProyectoFinalAp2.UI.Registros
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Telefono;
-
-        /// <summary>
-        /// RegularExpressionValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator;
 
         /// <summary>
         /// EmailTextBox control.
@@ -132,13 +105,13 @@ namespace ProyectoFinalAp2.UI.Registros
         protected global::System.Web.UI.WebControls.DropDownList Tipousuario;
 
         /// <summary>
-        /// ContrasenaTextBox control.
+        /// ContraseñaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ContrasenaTextBox;
+        protected global::System.Web.UI.WebControls.TextBox ContraseñaTextBox;
 
         /// <summary>
         /// Contrasena control.

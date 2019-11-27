@@ -11,7 +11,7 @@
     </script>
     <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <div class="panel panel-info">
+    <div class="panel panel-primary">
         <div class="panel-heading">Consulta Proveedores</div>
         <div class="panel-body">
 
@@ -71,8 +71,9 @@
                     <RowStyle BackColor="#EFF3FB" />
                 </asp:GridView>
             </div>
+            </div>
             <%--Imprimir--%>
-            <div class="card-footer">
+            <div class="panel-footer">
                 <div class="justify-content-start">
                     <div class="form-group" style="display: inline-block">
                         <button type="button" class="btn btn-warning mt-4" data-toggle="modal" data-target=".bd-example-modal-lg">Imprimir</button>
@@ -84,7 +85,7 @@
                 <div class="modal-dialog" style="max-width: 600px!important; min-width: 300px!important">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">REPORTE ESTUDIANTE</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">REPORTE PROVEEEDORES</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -92,7 +93,7 @@
                         <div class="modal-body">
 
                             <%--Viewer--%>
-                            <rsweb:ReportViewer ID="MyEstudiantesReportViewer" runat="server" ProcessingMode="Local" Height="400px" Width="500px">
+                            <rsweb:ReportViewer ID="ProveedoresReportViewer" runat="server" ProcessingMode="Local" Height="400px" Width="500px">
                                 <ServerReport ReportPath="" ReportServerUrl="" />
                             </rsweb:ReportViewer>
                         </div>
@@ -100,8 +101,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
         </div>
     </div>
 </asp:Content>
