@@ -34,7 +34,7 @@ namespace ProyectoFinalAp2Test
             articulo.DepartamentoId = 1;
             articulo.CategoriaId = 1;
             articulo.Cantidad = 2;
-            articulo.Descripcion = "Pedro";
+            articulo.Descripcion = "Pedroo";
             articulo.Costo = 200;
             articulo.Precio = 250;
             articulo.FechaCreacion = DateTime.Now;
