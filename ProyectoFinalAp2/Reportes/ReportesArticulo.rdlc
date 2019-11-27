@@ -9,7 +9,7 @@
               <Width>2.57408cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.85692cm</Width>
+              <Width>3.49703cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.57408cm</Width>
@@ -27,7 +27,7 @@
               <Width>2.46825cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.08208cm</Width>
+              <Width>2.96473cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -675,7 +675,7 @@
         </TablixRowHierarchy>
         <DataSetName>Articulo</DataSetName>
         <Height>1.2cm</Height>
-        <Width>18.28893cm</Width>
+        <Width>19.81169cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -685,7 +685,7 @@
       <Line Name="Line2">
         <Top>1.27056cm</Top>
         <Height>0cm</Height>
-        <Width>18.28894cm</Width>
+        <Width>19.81169cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -769,7 +769,7 @@
     <Height>0.80289in</Height>
     <Style />
   </Body>
-  <Width>7.30864in</Width>
+  <Width>7.84608in</Width>
   <Page>
     <PageHeader>
       <Height>4.41831cm</Height>
@@ -798,7 +798,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
           <Top>1.64111cm</Top>
-          <Left>1.68161cm</Left>
+          <Left>4.33789cm</Left>
           <Height>0.75875cm</Height>
           <Width>10.10122cm</Width>
           <Style>
@@ -850,7 +850,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox51</rd:DefaultName>
           <Top>2.54098cm</Top>
-          <Left>3.41483cm</Left>
+          <Left>6.07111cm</Left>
           <Height>0.6cm</Height>
           <Width>7.93611cm</Width>
           <ZIndex>1</ZIndex>
@@ -881,7 +881,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox44</rd:DefaultName>
-          <Left>11.19375cm</Left>
+          <Left>15.69524cm</Left>
           <Height>0.57713cm</Height>
           <Width>3.57763cm</Width>
           <ZIndex>2</ZIndex>
@@ -916,7 +916,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
           <Top>0.92287cm</Top>
-          <Left>3.66883cm</Left>
+          <Left>6.32511cm</Left>
           <Height>0.6cm</Height>
           <Width>6.76728cm</Width>
           <ZIndex>3</ZIndex>
@@ -949,9 +949,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox18</rd:DefaultName>
-          <Top>3.71925cm</Top>
+          <Top>3.61342cm</Top>
           <Height>0.6cm</Height>
-          <Width>4.42617cm</Width>
+          <Width>4.89184cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>
@@ -966,7 +966,7 @@
         <Line Name="Line1">
           <Top>4.38981cm</Top>
           <Height>0cm</Height>
-          <Width>18.28894cm</Width>
+          <Width>19.81169cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -1021,8 +1021,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.14111cm</Top>
-          <Left>16.36214cm</Left>
+          <Top>0.17639cm</Top>
+          <Left>17.79919cm</Left>
           <Height>0.49417cm</Height>
           <Width>1.47368cm</Width>
           <Style>
@@ -1054,8 +1054,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox49</rd:DefaultName>
-          <Top>0.14111cm</Top>
-          <Left>14.87109cm</Left>
+          <Top>0.17639cm</Top>
+          <Left>16.30814cm</Left>
           <Height>0.49417cm</Height>
           <Width>1.4205cm</Width>
           <ZIndex>1</ZIndex>

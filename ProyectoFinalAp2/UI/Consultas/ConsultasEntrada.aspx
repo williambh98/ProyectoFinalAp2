@@ -82,7 +82,7 @@
         </div>
         <!-- Modal para mi Reporte.// -->
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog" style="max-width: 600px!important; min-width: 300px!important">
+            <div class="modal-dialog" style="max-width: 700px!important; min-width: 700px!important">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">REPORTE ENTRADA</h5>
@@ -93,7 +93,7 @@
                     <div class="modal-body">
 
                         <%--Viewer--%>
-                        <rsweb:ReportViewer ID="EntradaReportViewer" runat="server" ProcessingMode="Local" Height="400px" Width="500px">
+                        <rsweb:ReportViewer ID="EntradaReportViewer" runat="server" ProcessingMode="Local" Height="500px" Width="650px">
                             <ServerReport ReportPath="" ReportServerUrl="" />
                         </rsweb:ReportViewer>
                     </div>

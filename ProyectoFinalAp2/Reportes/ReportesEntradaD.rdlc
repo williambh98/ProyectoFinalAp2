@@ -616,7 +616,7 @@
         </Paragraphs>
         <rd:DefaultName>Monto</rd:DefaultName>
         <Top>1.2cm</Top>
-        <Left>10.3157cm</Left>
+        <Left>10.62089cm</Left>
         <Height>0.48711cm</Height>
         <Width>1.80579cm</Width>
         <ZIndex>3</ZIndex>
@@ -653,7 +653,7 @@
         </Style>
       </Line>
     </ReportItems>
-    <Height>0.94167in</Height>
+    <Height>0.85in</Height>
     <Style />
   </Body>
   <Width>6.30833in</Width>
@@ -684,8 +684,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>1.64111cm</Top>
-          <Left>1.68161cm</Left>
+          <Top>1.34478cm</Top>
+          <Left>2.77433cm</Left>
           <Height>0.75875cm</Height>
           <Width>10.10122cm</Width>
           <Style>
@@ -736,8 +736,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox51</rd:DefaultName>
-          <Top>2.54098cm</Top>
-          <Left>3.41483cm</Left>
+          <Top>2.24465cm</Top>
+          <Left>4.50755cm</Left>
           <Height>0.6cm</Height>
           <Width>7.93611cm</Width>
           <ZIndex>1</ZIndex>
@@ -768,9 +768,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox44</rd:DefaultName>
-          <Left>11.19375cm</Left>
+          <Left>12.8532cm</Left>
           <Height>0.57713cm</Height>
-          <Width>3.57763cm</Width>
+          <Width>2.72547cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -802,8 +802,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>0.92287cm</Top>
-          <Left>3.66883cm</Left>
+          <Top>0.62654cm</Top>
+          <Left>4.76155cm</Left>
           <Height>0.6cm</Height>
           <Width>6.76728cm</Width>
           <ZIndex>3</ZIndex>

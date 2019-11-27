@@ -38,7 +38,7 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-plus-sign "></span> Registros<span class="caret"></span></a>
                             <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-                                <li><a href="/UI/Registros/RegistroUsuario.aspx"><span class="glyphicon glyphicon-plus-sign"></span>Usuario</a></li>
+                                <li><a href="/UI/Registros/RegistroUsuario.aspx">Usuario</a></li>
                                 <li><a href="/UI/Registros/RegistroArticulo.aspx">Articulo</a></li>
                                 <li><a href="/UI/Registros/RegistroCategoria.aspx">Categoria</a></li>
                                 <li><a href="/UI/Registros/RegistroDepartamento.aspx">Departamento</a></li>
@@ -48,14 +48,14 @@
                         </li>
 
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span>  Capturar Inventario<span class="caret"></span></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-list"></span> Capturar Inventario<span class="caret"></span></a>
                             <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
                                 <li><a href="/UI/Registros/RegistroEntrada.aspx">Capturar</a></li>
                             </ul>
                         </li>
 
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span>  Consultas<span class="caret"></span></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-level-up"></span> Consultas<span class="caret"></span></a>
                             <ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
                                 <li><a href="/UI/Consultas/ConsultasArticulo.aspx">Articulo</a></li>
                                 <li><a href="/UI/Consultas/ConsultasCategoria.aspx">Categoria</a></li>
@@ -65,28 +65,25 @@
                                 <li><a href="/UI/Consultas/ConsultasEntrada.aspx">Inventario</a></li>
                             </ul>
                         </li>
-
                         <li class="dropdown">
                             <a href="/Login.aspx" style="font-family: Arial; font-size: 16px"><span class=" glyphicon glyphicon-user"></span> Login</a>
                         </li>
-                        <li class="form-group">
-                            <div class="col-sm-offset-10 col-sm-12">
-                            <asp:Button ID="CerrarSesionButton" runat="server" CausesValidation="false" CommandName="Select"
-                                Text="Cerrar Secion " class="btn btn-primary btn-sm" OnClick="CerrarSesionButton_Click" />
-                                </div>
-                        </li>
+                    
                     </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <asp:Button ID="CerrarSesionButton" runat="server" class="btn btn-primary my-2 my-sm-0" Text="Cerrar Secion " OnClick="CerrarSesionButton_Click" />
+                    </form>
+                
                 </div>
-                <div class="clearfix visible-lg-block"></div>
+               <%-- <div class="clearfix visible-lg-block"></div>--%>
 
             </nav>
-        </div>
-        <div>
-
+            
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-   
+       
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

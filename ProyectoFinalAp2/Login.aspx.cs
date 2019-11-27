@@ -26,7 +26,7 @@ namespace ProyectoFinalAp2
             {
 
                 string password = Utils.Hash(PasswordTextBox.Text);
-                if (repositorio.Auntenticar(UsuarioTextBox.Text, PasswordTextBox.Text))
+                if (repositorio.Auntenticar(UsuarioTextBox.Text, password))
                 {
                     FormsAuthentication.RedirectFromLoginPage(user.Email, true);
                 }

@@ -32,7 +32,7 @@
 
                 <div class="account-wall">
                     <div class="text-center">
-                        <img class="profile-img" src="\Resources\usuari.png"
+                        <img class="profile-img" src="\Resources\Usuario.png"
                             alt="">
                     </div>
                     <form runat="server">
@@ -52,13 +52,13 @@
                         <asp:Button runat="server" Text="Iniciar" class="btn btn-md btn-primary btn-block" OnClick="LoginButton_Click" />
                         <label class="checkbox pull-center">
                             <input type="checkbox" value="remember-me">
-                            Recuerdame               
+                            Recuerdar              
                         </label>
                         <br />
                     </form>
                 </div>
                 <div class="text-center">
-                    <a href="UI/Registros/RegistroUsuario.aspx" class="text-center new-account">Crear Cuenta </a>
+                    <a href="UI/Registros/RegistroUsuario.aspx" class="text-center new-account">Registrar Usuario </a>
                 </div>
             </div>
         </div>
