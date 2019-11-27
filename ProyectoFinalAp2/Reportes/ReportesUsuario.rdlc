@@ -6,28 +6,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.61642cm</Width>
+              <Width>2.99019cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.61642cm</Width>
+              <Width>2.99019cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.61642cm</Width>
+              <Width>2.99019cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.61642cm</Width>
+              <Width>2.99019cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.61642cm</Width>
+              <Width>2.99019cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.61642cm</Width>
+              <Width>2.99019cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.61642cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.61642cm</Width>
+              <Width>2.99019cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -221,47 +218,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox9</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox11">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Confimar Contrasena</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>Blue</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -544,41 +500,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ConfimarContrasena">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!ConfimarContrasena.Value</Value>
-                              <Style>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>ConfimarContrasena</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="Administrador">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -660,7 +581,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -700,10 +620,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>1.37639cm</Top>
+        <Top>1.27056cm</Top>
         <Left>1.22336cm</Left>
         <Height>0.56472cm</Height>
-        <Width>0.90404cm</Width>
+        <Width>1.4332cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>

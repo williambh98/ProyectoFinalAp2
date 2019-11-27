@@ -674,9 +674,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Articulo</DataSetName>
-        <Left>0cm</Left>
         <Height>1.2cm</Height>
-        <Width>18.28894cm</Width>
+        <Width>18.28893cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -716,7 +715,7 @@
         <Top>1.33351cm</Top>
         <Left>1.1938cm</Left>
         <Height>0.56472cm</Height>
-        <Width>0.69237cm</Width>
+        <Width>0.7347cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -951,7 +950,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox18</rd:DefaultName>
           <Top>3.71925cm</Top>
-          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>4.42617cm</Width>
           <ZIndex>4</ZIndex>

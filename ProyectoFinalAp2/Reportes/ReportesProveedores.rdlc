@@ -529,9 +529,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Count(Fields!ArticuloID.Value)</Value>
+                <Value>=Count(Fields!IDProveedor.Value)</Value>
                 <Style>
-                  <FontStyle>Normal</FontStyle>
                   <FontWeight>Bold</FontWeight>
                   <Color>#333333</Color>
                 </Style>
@@ -544,7 +543,7 @@
         <Top>1.27056cm</Top>
         <Left>1.1938cm</Left>
         <Height>0.56472cm</Height>
-        <Width>0.69237cm</Width>
+        <Width>0.84054cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -609,7 +608,7 @@
     <Height>0.75in</Height>
     <Style />
   </Body>
-  <Width>6.30833in</Width>
+  <Width>6.25in</Width>
   <Page>
     <PageHeader>
       <Height>4.3592cm</Height>

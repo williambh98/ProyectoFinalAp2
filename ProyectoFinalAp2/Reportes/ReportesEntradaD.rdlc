@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.65522cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.65522cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.65522cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.65522cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.65522cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.65522cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -515,7 +515,7 @@
         </TablixRowHierarchy>
         <DataSetName>EntradaD</DataSetName>
         <Height>1.2cm</Height>
-        <Width>15cm</Width>
+        <Width>15.93133cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -531,7 +531,6 @@
               <TextRun>
                 <Value>=Count(Fields!ArticuloID.Value)</Value>
                 <Style>
-                  <FontStyle>Normal</FontStyle>
                   <FontWeight>Bold</FontWeight>
                   <Color>#333333</Color>
                 </Style>
@@ -544,7 +543,7 @@
         <Top>1.37639cm</Top>
         <Left>1.1938cm</Left>
         <Height>0.56472cm</Height>
-        <Width>0.69237cm</Width>
+        <Width>0.96987cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -603,7 +602,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!Monto.Value)</Value>
+                <Value>=Sum(Fields!Importe.Value)</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                   <Color>#333333</Color>
@@ -616,10 +615,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Monto</rd:DefaultName>
-        <Top>1.27056cm</Top>
-        <Left>9.91104cm</Left>
+        <Top>1.2cm</Top>
+        <Left>10.3157cm</Left>
         <Height>0.48711cm</Height>
-        <Width>2.58896cm</Width>
+        <Width>1.80579cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -632,11 +631,32 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Line Name="Line1">
+        <Top>1.2cm</Top>
+        <Height>0cm</Height>
+        <Width>15cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Height>0cm</Height>
+        <Width>15cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>0.94167in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>6.30833in</Width>
   <Page>
     <PageHeader>
       <Height>4.31925cm</Height>
@@ -816,7 +836,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox18</rd:DefaultName>
-          <Top>3.71925cm</Top>
+          <Top>3.54286cm</Top>
           <Height>0.6cm</Height>
           <Width>5.84667cm</Width>
           <ZIndex>4</ZIndex>

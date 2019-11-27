@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.10161cm</Width>
+              <Width>4.54378cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.10161cm</Width>
+              <Width>4.54378cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.10161cm</Width>
+              <Width>4.54378cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -58,7 +58,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -100,7 +99,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -142,7 +140,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -278,7 +275,7 @@
         </TablixRowHierarchy>
         <DataSetName>Departamento</DataSetName>
         <Height>1.2cm</Height>
-        <Width>12.30483cm</Width>
+        <Width>13.63133cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -292,9 +289,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Count(Fields!ArticuloID.Value)</Value>
+                <Value>=Count(Fields!DepartamentoId.Value)</Value>
                 <Style>
-                  <FontStyle>Normal</FontStyle>
                   <FontWeight>Bold</FontWeight>
                   <Color>#333333</Color>
                 </Style>
@@ -307,7 +303,7 @@
         <Top>1.37639cm</Top>
         <Left>1.1938cm</Left>
         <Height>0.56472cm</Height>
-        <Width>0.69237cm</Width>
+        <Width>0.90404cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -360,7 +356,7 @@
       <Line Name="Line2">
         <Top>1.27056cm</Top>
         <Height>0cm</Height>
-        <Width>12.30483cm</Width>
+        <Width>13.63133cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -372,7 +368,7 @@
     <Height>0.825in</Height>
     <Style />
   </Body>
-  <Width>5.575in</Width>
+  <Width>5.36667in</Width>
   <Page>
     <PageHeader>
       <Height>4.5497cm</Height>
@@ -484,7 +480,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox44</rd:DefaultName>
-          <Left>10.58287cm</Left>
+          <Left>10.0537cm</Left>
           <Height>0.57713cm</Height>
           <Width>3.57763cm</Width>
           <ZIndex>2</ZIndex>
@@ -569,7 +565,7 @@
         <Line Name="Line1">
           <Top>4.28837cm</Top>
           <Height>0cm</Height>
-          <Width>12.30483cm</Width>
+          <Width>13.63133cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
