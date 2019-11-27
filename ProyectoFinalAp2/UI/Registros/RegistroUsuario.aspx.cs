@@ -82,7 +82,7 @@ namespace ProyectoFinalAp2.UI.Registros
         private bool ExisteBasedeDatos()
         {
             Usuario usuario = new Usuario();
-            int id = Convert.ToInt32(IdTextBox.Text);
+            int id = Utils.ToInt(IdTextBox.Text);
             RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
             usuario = repositorio.Buscar(id);
             return usuario != null;

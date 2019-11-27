@@ -65,7 +65,7 @@ namespace ProyectoFinalAp2.UI.Registros
         private Articulo LlenarClase()
         {
             Articulo articulo = new Articulo();
-            articulo.ArticuloID = Convert.ToInt32(IdTextBox.Text);
+            articulo.ArticuloID = Utils.ToInt(IdTextBox.Text);
             articulo.DepartamentoId = DepartamentoDropdownList.SelectedValue.Length;
             articulo.CategoriaId = CategoriaDropDownList.SelectedValue.Length;
             articulo.IDProveedor = ProveedorDropDownList.SelectedValue.Length;
@@ -113,7 +113,7 @@ namespace ProyectoFinalAp2.UI.Registros
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Articulo> db = new RepositorioBase<Articulo>();
-            Articulo articulo = db.Buscar(Convert.ToInt32(IdTextBox.Text));
+            Articulo articulo = db.Buscar(Utils.ToInt(IdTextBox.Text));
             return (articulo != null);
         }
         //Botones Guardar, Burcar, eliminar

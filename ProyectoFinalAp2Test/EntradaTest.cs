@@ -17,7 +17,6 @@ namespace ProyectoFinalAp2Test
         public void GuardarTest()
         {
             Entrada entrada = new Entrada();
-            entrada.EntradaId = 1;
             entrada.UsuarioID = 1;
             entrada.Total = 50;
             entrada.Fecha = DateTime.Now;

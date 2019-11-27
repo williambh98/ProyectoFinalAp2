@@ -79,7 +79,7 @@ namespace ProyectoFinalAp2.UI.Registros
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
-            Proveedores proveedores = db.Buscar(Convert.ToInt32(IdTextBox.Text));
+            Proveedores proveedores = db.Buscar(Utils.ToInt(IdTextBox.Text));
             return (proveedores != null);
 
         }

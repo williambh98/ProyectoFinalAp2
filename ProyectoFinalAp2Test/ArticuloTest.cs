@@ -16,10 +16,11 @@ namespace ProyectoFinalAp2Test
             Articulo articulo = new Articulo();
             articulo.IDProveedor = 1;
             articulo.DepartamentoId = 1;
+            articulo.CategoriaId = 1;
             articulo.Cantidad = 1;
             articulo.Descripcion = "Pedro";
             articulo.Costo = 200;
-            articulo.Precio = 200;
+            articulo.Precio = 250;
             articulo.FechaCreacion = DateTime.Now;
             RepositorioBase<Articulo> repositorioBase = new RepositorioBase<Articulo>();
             Assert.IsTrue(repositorioBase.Guardar(articulo));
@@ -28,13 +29,14 @@ namespace ProyectoFinalAp2Test
         public void ModificarTest()
         {
             Articulo articulo = new Articulo();
-            articulo.ArticuloID = 1;
+            articulo.ArticuloID = 2;
             articulo.IDProveedor = 1;
             articulo.DepartamentoId = 1;
-            articulo.Cantidad = 1;
+            articulo.CategoriaId = 1;
+            articulo.Cantidad = 2;
             articulo.Descripcion = "Pedro";
             articulo.Costo = 200;
-            articulo.Precio = 200;
+            articulo.Precio = 250;
             articulo.FechaCreacion = DateTime.Now;
             RepositorioBase<Articulo> repositorioBase = new RepositorioBase<Articulo>();
             Assert.IsTrue(repositorioBase.Modificar(articulo));
@@ -42,7 +44,7 @@ namespace ProyectoFinalAp2Test
         [TestMethod()]
         public void BuscarTest()
         {
-            int id = 1;
+            int id = 2;
             Articulo articulo = new Articulo();
             RepositorioBase<Articulo> repositorioBase = new RepositorioBase<Articulo>();
             articulo = repositorioBase.Buscar(id);

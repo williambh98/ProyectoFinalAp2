@@ -52,7 +52,7 @@
                         <asp:Button runat="server" Text="Iniciar" class="btn btn-md btn-primary btn-block" OnClick="LoginButton_Click" />
                         <label class="checkbox pull-center">
                             <input type="checkbox" value="remember-me">
-                            Recuerdar              
+                            Recordar              
                         </label>
                         <br />
                     </form>

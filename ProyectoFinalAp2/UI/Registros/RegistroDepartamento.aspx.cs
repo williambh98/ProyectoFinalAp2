@@ -67,7 +67,7 @@ namespace ProyectoFinalAp2.UI.Registros
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Departamento> db = new RepositorioBase<Departamento>();
-            Departamento departamento = db.Buscar(Convert.ToInt32(IdTextBox.Text));
+            Departamento departamento = db.Buscar(Utils.ToInt(IdTextBox.Text));
             return (departamento != null);
 
         }

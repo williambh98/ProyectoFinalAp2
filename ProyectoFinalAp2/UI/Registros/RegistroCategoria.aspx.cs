@@ -69,7 +69,7 @@ namespace ProyectoFinalAp2.UI.Registros
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Categoria> db = new RepositorioBase<Categoria>();
-            Categoria categoria = db.Buscar(Convert.ToInt32(IdTextBox.Text));
+            Categoria categoria = db.Buscar(Utils.ToInt(IdTextBox.Text));
             return (categoria != null);
 
         }

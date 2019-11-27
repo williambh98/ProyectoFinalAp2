@@ -275,7 +275,7 @@
         </TablixRowHierarchy>
         <DataSetName>Departamento</DataSetName>
         <Height>1.2cm</Height>
-        <Width>13.63133cm</Width>
+        <Width>13.63134cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -536,7 +536,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>REPORTE ARTICULO</Value>
+                  <Value>REPORTE DEPARTAMENTO</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -550,7 +550,7 @@
           <rd:DefaultName>Textbox18</rd:DefaultName>
           <Top>3.57814cm</Top>
           <Height>0.6cm</Height>
-          <Width>4.8495cm</Width>
+          <Width>6.28883cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>

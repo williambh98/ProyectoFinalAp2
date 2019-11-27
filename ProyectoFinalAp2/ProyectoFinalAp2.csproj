@@ -136,6 +136,9 @@
     <Content Include="ProyectoFinalAp2BDDataSet.xsc">
       <DependentUpon>ProyectoFinalAp2BDDataSet.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\SystemInventario - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\SystemInventario - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\SystemInventario - Web Deploy.pubxml" />
     <None Include="ProyectoFinalAp2BDDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ProyectoFinalAp2BDDataSet.Designer.cs</LastGenOutput>

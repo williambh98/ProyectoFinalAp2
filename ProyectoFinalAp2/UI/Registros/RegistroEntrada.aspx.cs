@@ -66,7 +66,7 @@ namespace ProyectoFinalAp2.UI.Registros
         {
             Entrada Entrada = new Entrada();
             Entrada = (Entrada)ViewState["Entrada"];
-            Entrada.EntradaId = Convert.ToInt32(IdTextBox.Text);
+            Entrada.EntradaId = Utils.ToInt(IdTextBox.Text);
             Entrada.Total = Utils.ToDecimal(TotalTextBox.Text);
             Entrada.Fecha = DateTime.Now;
             return Entrada;
@@ -207,7 +207,7 @@ namespace ProyectoFinalAp2.UI.Registros
                 entrada = (Entrada)ViewState["Entrada"];
                 decimal Importe = Convert.ToDecimal(CantidadTextBox.Text) * Convert.ToDecimal(CostoTextBox.Text);
                 entrada.AgregarDetalle
-                   (Utils.ToInt(ProductoDropdownList.SelectedValue), descripcion, Convert.ToDecimal(CantidadTextBox.Text),
+                   (0,Utils.ToInt(IdTextBox.Text), Utils.ToInt(ProductoDropdownList.SelectedValue), descripcion, Convert.ToDecimal(CantidadTextBox.Text),
                     Convert.ToDecimal(CostoTextBox.Text), Importe, date);
                 ViewState["Entrada"] = entrada;
                 this.BindGrid();

@@ -515,7 +515,7 @@
         </TablixRowHierarchy>
         <DataSetName>EntradaD</DataSetName>
         <Height>1.2cm</Height>
-        <Width>15.93133cm</Width>
+        <Width>15.93132cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -684,7 +684,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>1.34478cm</Top>
+          <Top>0.99639cm</Top>
           <Left>2.77433cm</Left>
           <Height>0.75875cm</Height>
           <Width>10.10122cm</Width>
@@ -736,7 +736,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox51</rd:DefaultName>
-          <Top>2.24465cm</Top>
+          <Top>1.89626cm</Top>
           <Left>4.50755cm</Left>
           <Height>0.6cm</Height>
           <Width>7.93611cm</Width>
@@ -802,7 +802,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>0.62654cm</Top>
+          <Top>0.27815cm</Top>
           <Left>4.76155cm</Left>
           <Height>0.6cm</Height>
           <Width>6.76728cm</Width>
@@ -840,6 +840,39 @@
           <Height>0.6cm</Height>
           <Width>5.84667cm</Width>
           <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Proveedor: William</Value>
+                  <Style>
+                    <FontSize>14pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>Blue</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>2.60209cm</Top>
+          <Height>0.76438cm</Height>
+          <Width>5.90783cm</Width>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
